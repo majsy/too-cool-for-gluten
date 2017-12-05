@@ -3,6 +3,8 @@
 const path = require('path');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const json = require('./static/data/app.json');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: './src/index.html',
@@ -22,13 +24,15 @@ module.exports = {
     loaders: [
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
       { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ },
+      { test: /\.json$/, loader: 'json-loader' },
       { test: /\.scss$/, use: ExtractTextPlugin.extract({
           use: [{
             loader: 'css-loader',
           },
           {
             loader: 'sass-loader'
-          }]
+          }
+        ]
       })
     }]
   },
@@ -39,5 +43,8 @@ module.exports = {
       disable: false,
       allChunks: true
     })
+    // new CopyWebpackPlugin({ 
+    //   from: 'static/data/', to: 'dist/data/'
+    // })
   ]
 }

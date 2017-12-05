@@ -1,0 +1,11 @@
+.container {
+  
+}
+
+.recipeItem {
+  // display: bl;
+
+  &.isHidden {
+    display: none;
+  }
+}

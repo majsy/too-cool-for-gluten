@@ -1,0 +1,11 @@
+{
+  "title": "title",
+  "subhead": "Who needs gluten anyways?",
+  "button": "click",
+  "recipeDescription": "description",
+  "footer": {
+    "credit": "Majsan",
+    "url": "#"
+  },
+  "about": "bla bla bla"
+}
