@@ -43,8 +43,5 @@ module.exports = {
       disable: false,
       allChunks: true
     })
-    // new CopyWebpackPlugin({ 
-    //   from: 'static/data/', to: 'dist/data/'
-    // })
   ]
 }

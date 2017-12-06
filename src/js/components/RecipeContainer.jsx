@@ -14,7 +14,7 @@ export default class RecipeContainer extends React.Component {
 
   render() {
     return (
-      <div className={styles.container}>
+      <div className="recipe-container">
         <p>{data.recipeDescription}</p>
 
         { this.displayCurrentRecipe() }

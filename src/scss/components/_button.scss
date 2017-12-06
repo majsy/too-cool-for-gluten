@@ -2,9 +2,10 @@
 @import '../base/mixins.scss';
 
 .button {
-  border: 1px solid $red;
+  border: 2px solid $pink-dark;
+  background-color: $white;
 
   @include breakpoint(mobile) {
-    border: 1px solid green;
+    border: 2px solid $purple;
   }
 }

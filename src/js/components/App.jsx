@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Header.jsx'
+import About from './About.jsx'
 import Button from './Button.jsx'
 import RecipeContainer from './RecipeContainer.jsx'
 import recipes from '../../../static/data/recipes.json'
@@ -31,6 +32,7 @@ export default class App extends React.Component {
     return (
       <div className="app-container">
         <Header />
+        <About />
         <Button handleClick={this.handleClick} />
         <RecipeContainer currentRecipe={this.state.currentRecipe}/>
       </div>

@@ -1,5 +1,7 @@
 @import 'variables.scss';
 
+// Breakpoint mixin
+
 @mixin breakpoint($class) {
   @if $class == mobile-s {
     @media (max-width: 320px) { @content; }
