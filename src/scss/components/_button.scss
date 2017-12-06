@@ -1,0 +1,10 @@
+@import '../base/variables.scss';
+@import '../base/mixins.scss';
+
+.button {
+  border: 1px solid $red;
+
+  @include breakpoint(mobile) {
+    border: 1px solid green;
+  }
+}

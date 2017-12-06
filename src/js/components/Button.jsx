@@ -1,5 +1,6 @@
 import React from 'react';
 import data from '../../../static/data/app.json'
+import styles from '../../scss/components/_button.scss'
 
 export default class Button extends React.Component {
   handleClick = () => {
@@ -8,7 +9,7 @@ export default class Button extends React.Component {
 
   render() {
     return (
-      <button onClick={this.handleClick}>{data.button}</button>
+      <button className="button" onClick={this.handleClick}>{data.button}</button>
     )
   }
 }

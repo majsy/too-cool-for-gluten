@@ -1,7 +1,15 @@
+// Base
+@import 'base/global.scss';
+@import 'base/variables.scss';
+
+// Components
+@import 'components/recipe-link.scss';
+@import 'components/recipe-container.scss';
+
 .test {
-  background-color: lightpink;
+  background-color: $pink;
 
   h1 {
-    color: black;
+    color: $white;
   }
 }

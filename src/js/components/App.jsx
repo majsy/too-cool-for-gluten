@@ -3,6 +3,7 @@ import Header from './Header.jsx'
 import Button from './Button.jsx'
 import RecipeContainer from './RecipeContainer.jsx'
 import recipes from '../../../static/data/recipes.json'
+import styles from '../../scss/base/_global.scss'
 
 export default class App extends React.Component {
   constructor() {
@@ -12,17 +13,11 @@ export default class App extends React.Component {
       currentRecipe: null
     }
   }
-  // show currently active project
-  // this.getProjectContent(projectId).classList.add('isVisible');
 
   getRecipe() {
-    const data = recipes;
+    const randomIndex = Math.floor(Math.random() * recipes.length)
+    const currentRecipe = recipes[randomIndex];
 
-    const randomIndex = Math.floor(Math.random() * data.length)
-    const currentRecipe = data[randomIndex];
-    
-    console.log(currentRecipe)
-    
     return (
       this.setState({currentRecipe: currentRecipe})
     )
@@ -34,10 +29,10 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="app-container">
         <Header />
         <Button handleClick={this.handleClick} />
-        <RecipeContainer currentRecipe={this.props.currentRecipe}/>
+        <RecipeContainer currentRecipe={this.state.currentRecipe}/>
       </div>
     )
   }

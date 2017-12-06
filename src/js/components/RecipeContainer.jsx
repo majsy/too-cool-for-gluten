@@ -1,10 +1,15 @@
 import React from 'react';
 import data from '../../../static/data/app.json'
-import styles from '../../scss/components/recipe-container.scss'
+import styles from '../../scss/components/_recipe-container.scss'
+import RecipeLink from './RecipeLink.jsx'
 
 export default class RecipeContainer extends React.Component {
-  hideRecipes() {
-    recipes.forEach(recipe => recipe.classList.add('isHidden'));
+  displayCurrentRecipe() {
+    let currentRecipe = this.props.currentRecipe;
+
+    if (currentRecipe) {
+      return <RecipeLink title={currentRecipe.title} url={currentRecipe.url} />
+    }
   }
 
   render() {
@@ -12,6 +17,7 @@ export default class RecipeContainer extends React.Component {
       <div className={styles.container}>
         <p>{data.recipeDescription}</p>
 
+        { this.displayCurrentRecipe() }
       </div>  
     )
   }
