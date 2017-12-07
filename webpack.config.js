@@ -4,13 +4,13 @@ const path = require('path');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 // const CopyWebpackPlugin = require('copy-webpack-plugin');
-const json = require('./static/data/app.json');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: './src/index.html',
   filename: 'index.html',
   inject: 'body'
-})
+});
+const json = require('./static/data/app.json', './static/data/recipes.json');
 
 const output = path.resolve(__dirname + '/dist/');
 
@@ -26,13 +26,12 @@ module.exports = {
       { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ },
       { test: /\.json$/, loader: 'json-loader' },
       { test: /\.scss$/, use: ExtractTextPlugin.extract({
-          use: [{
-            loader: 'css-loader',
-          },
-          {
-            loader: 'sass-loader'
-          }
-        ]
+        use: [{
+          loader: 'css-loader',
+        },
+        {
+          loader: 'sass-loader'
+        }]
       })
     }]
   },

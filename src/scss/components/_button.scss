@@ -1,9 +1,10 @@
-@import '../base/variables.scss';
-@import '../base/mixins.scss';
+@import '../base/_variables.scss';
+@import '../base/_mixins.scss';
 
 .button {
   border: 2px solid $pink-dark;
   background-color: $white;
+  width: 80px;
 
   @include breakpoint(mobile) {
     border: 2px solid $purple;

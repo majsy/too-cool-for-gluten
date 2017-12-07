@@ -60,11 +60,26 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 14);
+/******/ 	return __webpack_require__(__webpack_require__.s = 15);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports = __webpack_require__(16);
+} else {
+  module.exports = __webpack_require__(17);
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ }),
+/* 1 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -254,21 +269,6 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
-
-if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(15);
-} else {
-  module.exports = __webpack_require__(16);
-}
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -312,6 +312,12 @@ module.exports = emptyFunction;
 
 /***/ }),
 /* 3 */
+/***/ (function(module, exports) {
+
+module.exports = {"title":"title","subhead":"Who needs gluten anyways?","button":"click","recipeDescription":"description","footer":{"credit":"Majsan","url":"#"},"about":{"title":"about","copy":"bla bla"}}
+
+/***/ }),
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -408,7 +414,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -429,10 +435,10 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 module.exports = emptyObject;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -489,10 +495,10 @@ function invariant(condition, format, a, b, c, d, e, f) {
 }
 
 module.exports = invariant;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -558,10 +564,10 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 module.exports = warning;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -575,9 +581,9 @@ module.exports = warning;
 
 
 if (process.env.NODE_ENV !== 'production') {
-  var invariant = __webpack_require__(5);
-  var warning = __webpack_require__(6);
-  var ReactPropTypesSecret = __webpack_require__(17);
+  var invariant = __webpack_require__(6);
+  var warning = __webpack_require__(7);
+  var ReactPropTypesSecret = __webpack_require__(18);
   var loggedTypeFailures = {};
 }
 
@@ -625,10 +631,10 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
 
 module.exports = checkPropTypes;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -667,7 +673,7 @@ var ExecutionEnvironment = {
 module.exports = ExecutionEnvironment;
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -745,10 +751,10 @@ var EventListener = {
 };
 
 module.exports = EventListener;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -790,7 +796,7 @@ function getActiveElement(doc) /*?DOMElement*/{
 module.exports = getActiveElement;
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -861,7 +867,7 @@ function shallowEqual(objA, objB) {
 module.exports = shallowEqual;
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -876,7 +882,7 @@ module.exports = shallowEqual;
  * 
  */
 
-var isTextNode = __webpack_require__(20);
+var isTextNode = __webpack_require__(21);
 
 /*eslint-disable no-bitwise */
 
@@ -904,7 +910,7 @@ function containsNode(outerNode, innerNode) {
 module.exports = containsNode;
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -934,25 +940,25 @@ function focusNode(node) {
 module.exports = focusNode;
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(18);
+var _reactDom = __webpack_require__(19);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _App = __webpack_require__(27);
+var _App = __webpack_require__(28);
 
 var _App2 = _interopRequireDefault(_App);
 
-__webpack_require__(31);
+__webpack_require__(40);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -968,7 +974,7 @@ var _temp = function () {
 ;
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -981,7 +987,7 @@ var _temp = function () {
  * LICENSE file in the root directory of this source tree.
  */
 
-var m=__webpack_require__(3),n=__webpack_require__(4),p=__webpack_require__(2),q="function"===typeof Symbol&&Symbol["for"],r=q?Symbol["for"]("react.element"):60103,t=q?Symbol["for"]("react.call"):60104,u=q?Symbol["for"]("react.return"):60105,v=q?Symbol["for"]("react.portal"):60106,w=q?Symbol["for"]("react.fragment"):60107,x="function"===typeof Symbol&&Symbol.iterator;
+var m=__webpack_require__(4),n=__webpack_require__(5),p=__webpack_require__(2),q="function"===typeof Symbol&&Symbol["for"],r=q?Symbol["for"]("react.element"):60103,t=q?Symbol["for"]("react.call"):60104,u=q?Symbol["for"]("react.return"):60105,v=q?Symbol["for"]("react.portal"):60106,w=q?Symbol["for"]("react.fragment"):60107,x="function"===typeof Symbol&&Symbol.iterator;
 function y(a){for(var b=arguments.length-1,e="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,c=0;c<b;c++)e+="\x26args[]\x3d"+encodeURIComponent(arguments[c+1]);b=Error(e+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}
 var z={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}};function A(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}A.prototype.isReactComponent={};A.prototype.setState=function(a,b){"object"!==typeof a&&"function"!==typeof a&&null!=a?y("85"):void 0;this.updater.enqueueSetState(this,a,b,"setState")};A.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};
 function B(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}function C(){}C.prototype=A.prototype;var D=B.prototype=new C;D.constructor=B;m(D,A.prototype);D.isPureReactComponent=!0;function E(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}var F=E.prototype=new C;F.constructor=E;m(F,A.prototype);F.unstable_isAsyncReactComponent=!0;F.render=function(){return this.props.children};var G={current:null},H=Object.prototype.hasOwnProperty,I={key:!0,ref:!0,__self:!0,__source:!0};
@@ -996,7 +1002,7 @@ isValidElement:K,version:"16.2.0",__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_F
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1017,12 +1023,12 @@ if (process.env.NODE_ENV !== "production") {
   (function() {
 'use strict';
 
-var _assign = __webpack_require__(3);
-var emptyObject = __webpack_require__(4);
-var invariant = __webpack_require__(5);
-var warning = __webpack_require__(6);
+var _assign = __webpack_require__(4);
+var emptyObject = __webpack_require__(5);
+var invariant = __webpack_require__(6);
+var warning = __webpack_require__(7);
 var emptyFunction = __webpack_require__(2);
-var checkPropTypes = __webpack_require__(7);
+var checkPropTypes = __webpack_require__(8);
 
 // TODO: this is special because it gets imported during build.
 
@@ -2358,10 +2364,10 @@ module.exports = react;
   })();
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2380,7 +2386,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2418,15 +2424,15 @@ if (process.env.NODE_ENV === 'production') {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = __webpack_require__(19);
+  module.exports = __webpack_require__(20);
 } else {
-  module.exports = __webpack_require__(22);
+  module.exports = __webpack_require__(23);
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2442,7 +2448,7 @@ if (process.env.NODE_ENV === 'production') {
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(1),l=__webpack_require__(8),B=__webpack_require__(3),C=__webpack_require__(2),ba=__webpack_require__(9),da=__webpack_require__(10),ea=__webpack_require__(11),fa=__webpack_require__(12),ia=__webpack_require__(13),D=__webpack_require__(4);
+var aa=__webpack_require__(0),l=__webpack_require__(9),B=__webpack_require__(4),C=__webpack_require__(2),ba=__webpack_require__(10),da=__webpack_require__(11),ea=__webpack_require__(12),fa=__webpack_require__(13),ia=__webpack_require__(14),D=__webpack_require__(5);
 function E(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}aa?void 0:E("227");
 var oa={children:!0,dangerouslySetInnerHTML:!0,defaultValue:!0,defaultChecked:!0,innerHTML:!0,suppressContentEditableWarning:!0,suppressHydrationWarning:!0,style:!0};function pa(a,b){return(a&b)===b}
 var ta={MUST_USE_PROPERTY:1,HAS_BOOLEAN_VALUE:4,HAS_NUMERIC_VALUE:8,HAS_POSITIVE_NUMERIC_VALUE:24,HAS_OVERLOADED_BOOLEAN_VALUE:32,HAS_STRING_BOOLEAN_VALUE:64,injectDOMPropertyConfig:function(a){var b=ta,c=a.Properties||{},d=a.DOMAttributeNamespaces||{},e=a.DOMAttributeNames||{};a=a.DOMMutationMethods||{};for(var f in c){ua.hasOwnProperty(f)?E("48",f):void 0;var g=f.toLowerCase(),h=c[f];g={attributeName:g,attributeNamespace:null,propertyName:f,mutationMethod:null,mustUseProperty:pa(h,b.MUST_USE_PROPERTY),
@@ -2662,7 +2668,7 @@ Z.injectIntoDevTools({findFiberByHostInstance:pb,bundleType:0,version:"16.2.0",r
 
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2677,7 +2683,7 @@ Z.injectIntoDevTools({findFiberByHostInstance:pb,bundleType:0,version:"16.2.0",r
  * @typechecks
  */
 
-var isNode = __webpack_require__(21);
+var isNode = __webpack_require__(22);
 
 /**
  * @param {*} object The object to check.
@@ -2690,7 +2696,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2718,7 +2724,7 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2739,21 +2745,21 @@ if (process.env.NODE_ENV !== "production") {
   (function() {
 'use strict';
 
-var React = __webpack_require__(1);
-var invariant = __webpack_require__(5);
-var warning = __webpack_require__(6);
-var ExecutionEnvironment = __webpack_require__(8);
-var _assign = __webpack_require__(3);
+var React = __webpack_require__(0);
+var invariant = __webpack_require__(6);
+var warning = __webpack_require__(7);
+var ExecutionEnvironment = __webpack_require__(9);
+var _assign = __webpack_require__(4);
 var emptyFunction = __webpack_require__(2);
-var EventListener = __webpack_require__(9);
-var getActiveElement = __webpack_require__(10);
-var shallowEqual = __webpack_require__(11);
-var containsNode = __webpack_require__(12);
-var focusNode = __webpack_require__(13);
-var emptyObject = __webpack_require__(4);
-var checkPropTypes = __webpack_require__(7);
-var hyphenateStyleName = __webpack_require__(23);
-var camelizeStyleName = __webpack_require__(25);
+var EventListener = __webpack_require__(10);
+var getActiveElement = __webpack_require__(11);
+var shallowEqual = __webpack_require__(12);
+var containsNode = __webpack_require__(13);
+var focusNode = __webpack_require__(14);
+var emptyObject = __webpack_require__(5);
+var checkPropTypes = __webpack_require__(8);
+var hyphenateStyleName = __webpack_require__(24);
+var camelizeStyleName = __webpack_require__(26);
 
 /**
  * WARNING: DO NOT manually require this module.
@@ -18117,10 +18123,10 @@ module.exports = reactDom;
   })();
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18135,7 +18141,7 @@ module.exports = reactDom;
 
 
 
-var hyphenate = __webpack_require__(24);
+var hyphenate = __webpack_require__(25);
 
 var msPattern = /^ms-/;
 
@@ -18162,7 +18168,7 @@ function hyphenateStyleName(string) {
 module.exports = hyphenateStyleName;
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18198,7 +18204,7 @@ function hyphenate(string) {
 module.exports = hyphenate;
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18213,7 +18219,7 @@ module.exports = hyphenate;
 
 
 
-var camelize = __webpack_require__(26);
+var camelize = __webpack_require__(27);
 
 var msPattern = /^-ms-/;
 
@@ -18241,7 +18247,7 @@ function camelizeStyleName(string) {
 module.exports = camelizeStyleName;
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18276,7 +18282,7 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18288,21 +18294,33 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Header = __webpack_require__(28);
+var _Header = __webpack_require__(29);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _Button = __webpack_require__(29);
+var _About = __webpack_require__(31);
+
+var _About2 = _interopRequireDefault(_About);
+
+var _Button = __webpack_require__(32);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _RecipeContainer = __webpack_require__(30);
+var _RecipeContainer = __webpack_require__(34);
 
 var _RecipeContainer2 = _interopRequireDefault(_RecipeContainer);
+
+var _recipes = __webpack_require__(38);
+
+var _recipes2 = _interopRequireDefault(_recipes);
+
+var _global = __webpack_require__(39);
+
+var _global2 = _interopRequireDefault(_global);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -18318,18 +18336,46 @@ var App = function (_React$Component) {
   function App() {
     _classCallCheck(this, App);
 
-    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
+
+    _this.handleClick = function () {
+      return _this.__handleClick__REACT_HOT_LOADER__.apply(_this, arguments);
+    };
+
+    _this.state = {
+      currentRecipe: null
+    };
+    return _this;
   }
 
   _createClass(App, [{
+    key: '__handleClick__REACT_HOT_LOADER__',
+    value: function __handleClick__REACT_HOT_LOADER__() {
+      return this.__handleClick__REACT_HOT_LOADER__.apply(this, arguments);
+    }
+  }, {
+    key: 'getRecipe',
+    value: function getRecipe() {
+      var randomIndex = Math.floor(Math.random() * _recipes2.default.length);
+      var currentRecipe = _recipes2.default[randomIndex];
+
+      return this.setState({ currentRecipe: currentRecipe });
+    }
+  }, {
+    key: '__handleClick__REACT_HOT_LOADER__',
+    value: function __handleClick__REACT_HOT_LOADER__() {
+      this.getRecipe();
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
         'div',
-        null,
+        { className: 'app-container' },
         _react2.default.createElement(_Header2.default, null),
-        _react2.default.createElement(_Button2.default, null),
-        _react2.default.createElement(_RecipeContainer2.default, null)
+        _react2.default.createElement(_About2.default, null),
+        _react2.default.createElement(_Button2.default, { handleClick: this.handleClick }),
+        _react2.default.createElement(_RecipeContainer2.default, { currentRecipe: this.state.currentRecipe })
       );
     }
   }]);
@@ -18354,7 +18400,7 @@ var _temp = function () {
 ;
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18366,9 +18412,17 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
+
+var _app = __webpack_require__(3);
+
+var _app2 = _interopRequireDefault(_app);
+
+var _header = __webpack_require__(30);
+
+var _header2 = _interopRequireDefault(_header);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -18395,13 +18449,13 @@ var Header = function (_React$Component) {
         null,
         _react2.default.createElement(
           'h1',
-          null,
-          'Title'
+          { className: 'title' },
+          _app2.default.title
         ),
         _react2.default.createElement(
           'p',
-          null,
-          'Who needs gluten anyways?'
+          { className: 'subhead' },
+          _app2.default.subhead
         )
       );
     }
@@ -18427,7 +18481,13 @@ var _temp = function () {
 ;
 
 /***/ }),
-/* 29 */
+/* 30 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18439,9 +18499,89 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
+
+var _app = __webpack_require__(3);
+
+var _app2 = _interopRequireDefault(_app);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var About = function (_React$Component) {
+  _inherits(About, _React$Component);
+
+  function About() {
+    _classCallCheck(this, About);
+
+    return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).apply(this, arguments));
+  }
+
+  _createClass(About, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'h3',
+          null,
+          _app2.default.about.title
+        )
+      );
+    }
+  }]);
+
+  return About;
+}(_react2.default.Component);
+
+var _default = About;
+exports.default = _default;
+;
+
+var _temp = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(About, 'About', '/Users/madeleineauvinen/Documents/projects/2cool4gluten/src/js/components/About.jsx');
+
+  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/madeleineauvinen/Documents/projects/2cool4gluten/src/js/components/About.jsx');
+}();
+
+;
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _app = __webpack_require__(3);
+
+var _app2 = _interopRequireDefault(_app);
+
+var _button = __webpack_require__(33);
+
+var _button2 = _interopRequireDefault(_button);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -18455,18 +18595,40 @@ var Button = function (_React$Component) {
   _inherits(Button, _React$Component);
 
   function Button() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
     _classCallCheck(this, Button);
 
-    return _possibleConstructorReturn(this, (Button.__proto__ || Object.getPrototypeOf(Button)).apply(this, arguments));
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Button.__proto__ || Object.getPrototypeOf(Button)).call.apply(_ref, [this].concat(args))), _this), _this.handleClick = function () {
+      var _this2;
+
+      return (_this2 = _this).__handleClick__REACT_HOT_LOADER__.apply(_this2, arguments);
+    }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Button, [{
+    key: '__handleClick__REACT_HOT_LOADER__',
+    value: function __handleClick__REACT_HOT_LOADER__() {
+      return this.__handleClick__REACT_HOT_LOADER__.apply(this, arguments);
+    }
+  }, {
+    key: '__handleClick__REACT_HOT_LOADER__',
+    value: function __handleClick__REACT_HOT_LOADER__() {
+      this.props.handleClick();
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'h1',
-        null,
-        'Button'
+        'button',
+        { className: 'button', onClick: this.handleClick },
+        _app2.default.button
       );
     }
   }]);
@@ -18478,7 +18640,7 @@ var _default = Button;
 exports.default = _default;
 ;
 
-var _temp = function () {
+var _temp2 = function () {
   if (typeof __REACT_HOT_LOADER__ === 'undefined') {
     return;
   }
@@ -18491,7 +18653,13 @@ var _temp = function () {
 ;
 
 /***/ }),
-/* 30 */
+/* 33 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18503,9 +18671,21 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
+
+var _app = __webpack_require__(3);
+
+var _app2 = _interopRequireDefault(_app);
+
+var _recipeContainer = __webpack_require__(35);
+
+var _recipeContainer2 = _interopRequireDefault(_recipeContainer);
+
+var _RecipeLink = __webpack_require__(36);
+
+var _RecipeLink2 = _interopRequireDefault(_RecipeLink);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -18515,30 +18695,44 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Recipe = function (_React$Component) {
-  _inherits(Recipe, _React$Component);
+var RecipeContainer = function (_React$Component) {
+  _inherits(RecipeContainer, _React$Component);
 
-  function Recipe() {
-    _classCallCheck(this, Recipe);
+  function RecipeContainer() {
+    _classCallCheck(this, RecipeContainer);
 
-    return _possibleConstructorReturn(this, (Recipe.__proto__ || Object.getPrototypeOf(Recipe)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (RecipeContainer.__proto__ || Object.getPrototypeOf(RecipeContainer)).apply(this, arguments));
   }
 
-  _createClass(Recipe, [{
+  _createClass(RecipeContainer, [{
+    key: 'displayCurrentRecipe',
+    value: function displayCurrentRecipe() {
+      var currentRecipe = this.props.currentRecipe;
+
+      if (currentRecipe) {
+        return _react2.default.createElement(_RecipeLink2.default, { title: currentRecipe.title, url: currentRecipe.url });
+      }
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'h1',
-        null,
-        'Recipe'
+        'div',
+        { className: 'recipe-container' },
+        _react2.default.createElement(
+          'p',
+          null,
+          _app2.default.recipeDescription
+        ),
+        this.displayCurrentRecipe()
       );
     }
   }]);
 
-  return Recipe;
+  return RecipeContainer;
 }(_react2.default.Component);
 
-var _default = Recipe;
+var _default = RecipeContainer;
 exports.default = _default;
 ;
 
@@ -18547,7 +18741,7 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(Recipe, 'Recipe', '/Users/madeleineauvinen/Documents/projects/2cool4gluten/src/js/components/RecipeContainer.jsx');
+  __REACT_HOT_LOADER__.register(RecipeContainer, 'RecipeContainer', '/Users/madeleineauvinen/Documents/projects/2cool4gluten/src/js/components/RecipeContainer.jsx');
 
   __REACT_HOT_LOADER__.register(_default, 'default', '/Users/madeleineauvinen/Documents/projects/2cool4gluten/src/js/components/RecipeContainer.jsx');
 }();
@@ -18555,7 +18749,106 @@ var _temp = function () {
 ;
 
 /***/ }),
-/* 31 */
+/* 35 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _app = __webpack_require__(3);
+
+var _app2 = _interopRequireDefault(_app);
+
+var _recipeLink = __webpack_require__(37);
+
+var _recipeLink2 = _interopRequireDefault(_recipeLink);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var RecipeLink = function (_React$Component) {
+  _inherits(RecipeLink, _React$Component);
+
+  function RecipeLink() {
+    _classCallCheck(this, RecipeLink);
+
+    return _possibleConstructorReturn(this, (RecipeLink.__proto__ || Object.getPrototypeOf(RecipeLink)).apply(this, arguments));
+  }
+
+  _createClass(RecipeLink, [{
+    key: 'render',
+    value: function render() {
+      var title = this.props.title;
+      var url = this.props.url;
+
+      return _react2.default.createElement(
+        'a',
+        { className: 'recipe-link', href: url, target: '_blank' },
+        title
+      );
+    }
+  }]);
+
+  return RecipeLink;
+}(_react2.default.Component);
+
+var _default = RecipeLink;
+exports.default = _default;
+;
+
+var _temp = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(RecipeLink, 'RecipeLink', '/Users/madeleineauvinen/Documents/projects/2cool4gluten/src/js/components/RecipeLink.jsx');
+
+  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/madeleineauvinen/Documents/projects/2cool4gluten/src/js/components/RecipeLink.jsx');
+}();
+
+;
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports) {
+
+module.exports = [{"title":"Coconut Hot and Sour Soup","url":"http://www.wheatfreemeatfree.com/coconut-hot-and-sour-soup/"},{"title":"Creamy Cauliflower Potato Soup","url":"http://www.wheatfreemeatfree.com/creamy-cauliflower-potato-soup/"},{"title":"White Bean Tomato Soup","url":"http://www.wheatfreemeatfree.com/white-bean-tomato-soup/"},{"title":"Garam Masala Split Pea Soup","url":"http://www.wheatfreemeatfree.com/a-split-pea-soup/"},{"title":"Chilled Carrot Soup","url":"http://www.wheatfreemeatfree.com/chilled-carrot-soup/"},{"title":"Coconut Plantain Soup","url":"http://www.wheatfreemeatfree.com/coconut-plantain-soup/"},{"title":"Vegetarian White Chili","url":"http://www.wheatfreemeatfree.com/vegetarian-white-chili/"},{"title":"Mushroom Spinach Oat Soup","url":"http://www.wheatfreemeatfree.com/mushroom-spinach-oat-soup/"},{"title":"Thai Inspired Red Lentil Soup","url":"http://www.wheatfreemeatfree.com/thai-inspired-red-lentil-soup/"},{"title":"Green Soup","url":"http://www.wheatfreemeatfree.com/green-soup/"},{"title":"Tomato Soup","url":"http://www.wheatfreemeatfree.com/tomato-soup-and-my-favorite-grilled-cheese/"},{"title":"Red Cabbage Salad","url":"http://www.wheatfreemeatfree.com/red-cabbage-salad/"},{"title":"Honeydew and Fresh Mozzarella Salad","url":"http://www.wheatfreemeatfree.com/honeydew-bocconcini-salad/"},{"title":"Beet Salad","url":"http://www.wheatfreemeatfree.com/beet-salad/"},{"title":"Sesame Spinach Salad","url":"http://www.wheatfreemeatfree.com/sesame-spinach-salad/"},{"title":"Apple Cabbage Salad","url":"http://www.wheatfreemeatfree.com/apple-cabbage-salad/"},{"title":"Kale Quinoa Salad","url":"http://www.wheatfreemeatfree.com/kale-quinoa-salad/"},{"title":"Blood Orange and Radish Salad","url":"http://www.wheatfreemeatfree.com/blood-orange-and-radish-salad/"},{"title":"Kale Salad","url":"http://www.wheatfreemeatfree.com/kathys-kale-salad/"},{"title":"Pickled Turnips and Lentil Salad","url":"http://www.wheatfreemeatfree.com/pickled-turnips-and-lentil-salad/"},{"title":"Quinoa Squash Salad with Honey Paprika Vinaigrette","url":"http://www.wheatfreemeatfree.com/quinoa-squash-salad-with-honey-paprika-vinaigrette/"},{"title":"Dolmas (Stuffed Grape Leaves)","url":"http://www.wheatfreemeatfree.com/dolmas-stuffed-grape-leaves/"},{"title":"Roasted Garlic Eggplant Dip","url":"http://www.wheatfreemeatfree.com/roasted-garlic-eggplant-dip/"},{"title":"Fresh Cheese with Roasted Red Pepper","url":"http://www.wheatfreemeatfree.com/fresh-cheese-with-roasted-red-pepper/"},{"title":"White Bean Bruschetta Spread","url":"http://www.wheatfreemeatfree.com/white-bean-bruschetta-spread/"},{"title":"Mango Avocado Black Bean Salsa","url":"http://www.wheatfreemeatfree.com/mango-avocado-black-bean-salsa/"},{"title":"Goat Cheese Skewers","url":"http://www.wheatfreemeatfree.com/goat-cheese-skewers/"},{"title":"Guacamole","url":"http://www.wheatfreemeatfree.com/carolyns-guacamole/"},{"title":"Roasted Artichoke","url":"http://www.wheatfreemeatfree.com/roasted-artichokes/"},{"title":"Mushroom Caviar with Buckwheat Blini","url":"http://www.wheatfreemeatfree.com/mushroom-caviar-with-buckwheat-blini/"},{"title":"Sprouted Mung Bean and Coconut Fritters","url":"http://www.wheatfreemeatfree.com/sprouted-mung-bean-and-coconut-fritters/"},{"title":"Savory Rosemary Caramelized Onion Muffins","url":"http://www.wheatfreemeatfree.com/savory-rosemary-caramelized-onion-muffins/"},{"title":"Pineapple Kiwi Honeyed Salsa","url":"http://www.wheatfreemeatfree.com/pineapple-kiwi-honeyed-salsa/"},{"title":"Kale Chips vs Collard, Turnip & Mustard Green Chips","url":"http://www.wheatfreemeatfree.com/the-kale-chip-challenge-kale-vs-collard-turnip-and-mustard-greens/"},{"title":"Muhammara (Roasted Red Pepper Dip","url":"http://www.wheatfreemeatfree.com/muhammara-roasted-red-pepper-dip/"},{"title":"Korean BBQ Chickpeas","url":"http://www.wheatfreemeatfree.com/korean-bbq-chickpeas/"},{"title":"Grilled Jicama with Chimichurri","url":"http://www.wheatfreemeatfree.com/grilled-jicama-with-chimichurri/"},{"title":"Garlic Mushrooms","url":"http://www.wheatfreemeatfree.com/garlic-mushrooms/"},{"title":"Green Bean Fries with Garlic Aioli","url":"http://www.wheatfreemeatfree.com/green-bean-fries-with-garlic-aioli/"},{"title":"Southwestern Vegetarian Chili","url":"http://www.wheatfreemeatfree.com/southwestern-vegetarian-chili/"},{"title":"Chunky Tomato Basil Soup","url":"http://www.wheatfreemeatfree.com/chunky-tomato-basil-soup/"},{"title":"Broccoli Cheddar Soup","url":"http://www.wheatfreemeatfree.com/broccoli-cheddar-soup/"},{"title":"Vegetable Egg Drop Soups","url":"http://www.wheatfreemeatfree.com/vegetable-egg-drop-soup/"},{"title":"Acorn Squash Soup","url":"http://www.wheatfreemeatfree.com/acorn-squash-soup/"},{"title":"Vinegar Coleslaw","url":"http://www.wheatfreemeatfree.com/acorn-squash-soup/"},{"title":"Green Bean Fries with Garlic Aioli","url":"http://www.wheatfreemeatfree.com/green-bean-fries-with-garlic-aioli/"},{"title":"Garlic and Parsley Hummus with Crudites","url":"http://www.wheatfreemeatfree.com/garlic-and-parsley-hummus-with-crudites/"},{"title":"Spinach and Swiss Souffle","url":"http://www.wheatfreemeatfree.com/spinach-and-swiss-souffle/"},{"title":"Spaghetti'd Squash","url":"http://www.wheatfreemeatfree.com/spaghettid-squash/"},{"title":"Tomato Pie","url":"http://www.wheatfreemeatfree.com/not-my-grandmas-tomato-pie/"},{"title":"Cranberry, Squash and Kale Bowl","url":"http://www.wheatfreemeatfree.com/cranberry-squash-and-kale-bowl/"},{"title":"Mujadara (Lentils and Rice)","url":"http://www.wheatfreemeatfree.com/mujadara-lentils-and-rice/"},{"title":"Roasted Portobello Mushrooms with Roasted Peppers and Blue Cheese","url":"http://www.wheatfreemeatfree.com/roasted-portobellos-with-roasted-peppers-and-blue-cheese/"},{"title":"Falafel","url":"http://www.wheatfreemeatfree.com/falafel/"},{"title":"Lima Beans with Artichokes and Sun-Dried Tomatoes","url":"http://www.wheatfreemeatfree.com/lima-beans-with-artichokes-and-sun-dried-tomatoes/"},{"title":"Apple Cranberry Stuffed Squash","url":"http://www.wheatfreemeatfree.com/apple-cranberry-stuffed-squash/"},{"title":"Crusty Wasabi Tofu","url":"http://www.wheatfreemeatfree.com/crusty-wasabi-tofu/"},{"title":"Fresh Cranberry Beans with Oregano and Lemon","url":"http://www.wheatfreemeatfree.com/fresh-cranberry-beans-and-an-announcement/"},{"title":"Kidney Beans and Pears","url":"http://www.wheatfreemeatfree.com/kidney-beans-and-pears/"},{"title":"Blue Cheese Pasta with Pears and Chard","url":"http://www.wheatfreemeatfree.com/blue-cheese-pasta-with-pears-and-chard/"},{"title":"Autumn Salad with Pears, Squash and Kale","url":"http://www.wheatfreemeatfree.com/autumn-salad-with-pears-squash-kale/"},{"title":"Kale Apple Shitake Risotto","url":"http://www.wheatfreemeatfree.com/kale-apple-shitake-risotto/"},{"title":"Roman Beans with Polenta","url":"http://www.wheatfreemeatfree.com/roman-beans-with-polenta/"},{"title":"Hot and Sour Noodles","url":"http://www.wheatfreemeatfree.com/hot-and-sour-noodles/"},{"title":"Orange Tofu Stir-Fryn","url":"http://www.wheatfreemeatfree.com/asian-orange-tofu-stirfry/"},{"title":"Stuffed Eggplants","url":"http://www.wheatfreemeatfree.com/stuffed-eggplants/"},{"title":"Pear Tart with Mustard Greens and Gouda","url":"http://www.wheatfreemeatfree.com/pear-tart-two-ways-dinner-and-dessert/"},{"title":"Basil Butter Beans","url":"http://www.wheatfreemeatfree.com/basil-butter-beans/"},{"title":"Basic Lentils and Quinoa","url":"http://www.wheatfreemeatfree.com/basic-lentils-and-quinoa/"},{"title":"Long Bean Stir-Fry","url":"http://www.wheatfreemeatfree.com/long-bean-stir-fry/"},{"title":"Teriyaki Eggplant Steaks","url":"http://www.wheatfreemeatfree.com/teriyaki-eggplant-steaks/"},{"title":"Bell Pepper and Mushroom Fried Rice","url":"http://www.wheatfreemeatfree.com/bell-pepper-and-mushroom-fried-rice/"},{"title":"Aloo Gobi (Potatoes and Cauliflower)","url":"http://www.wheatfreemeatfree.com/aloo-gobi-potatoes-and-cauliflower/"},{"title":"Mushroom Nut Roast","url":"http://www.wheatfreemeatfree.com/mushroom-nut-roast/"},{"title":"Grilled Cheese with Pickles and Mustard","url":"http://www.wheatfreemeatfree.com/tomato-soup-and-my-favorite-grilled-cheese/"},{"title":"Turmeric Roasted Cauliflower","url":"http://www.wheatfreemeatfree.com/tumeric-roasted-cauliflower/"},{"title":"Roasted Root Vegetables with Horseradish Sauce","url":"http://www.wheatfreemeatfree.com/roasted-root-vegetables-with-horseradish-sauce/"},{"title":"White and Green Bean Salad","url":"http://www.wheatfreemeatfree.com/two-bean-salad/"},{"title":"Roasted Squash and Pears","url":"http://www.wheatfreemeatfree.com/roasted-squash-and-pears/"},{"title":"Kale Mashed Potatoes","url":"http://www.wheatfreemeatfree.com/kale-mashed-potatoes/"},{"title":"Buttery Green Beans and Radishes","url":"http://www.wheatfreemeatfree.com/green-beans-and-radishes/"},{"title":"Spring Potato Salad","url":"http://www.wheatfreemeatfree.com/spring-potato-salad/"},{"title":"Cauliflower Chickpea Skillet","url":"http://www.wheatfreemeatfree.com/cauliflower-and-chickpea-skillet/"},{"title":"Braised Brussels Sprouts in Mustard Sauce","url":"http://www.wheatfreemeatfree.com/braised-brussels-sprouts-in-mustard-sauce/"},{"title":"Arroz con Gandules (Rice with Pigeon Peas)","url":"http://www.wheatfreemeatfree.com/arroz-con-gandules-rice-with-pigeon-peas/"},{"title":"Persian Lentil and Raisin Rice (Adas Polo)","url":"http://www.wheatfreemeatfree.com/persian-lentil-and-raisin-rice-adas-polo/"},{"title":"Coleslaw with Grapes and Dried Apples","url":"http://www.wheatfreemeatfree.com/coleslaw-with-grapes-and-dried-apples/"},{"title":"Garlic Sauerkraut","url":"http://www.wheatfreemeatfree.com/garlic-sauerkraut/"},{"title":"Roasted Green Beans and Mushrooms","url":"http://www.wheatfreemeatfree.com/roasted-green-beans-and-mushrooms/"},{"title":"A Veggie Lover's Shepherd's Pie","url":"http://glutenfreegoddess.blogspot.com/2007/04/veggie-lovers-shepherds-pie.html"},{"title":"African Coconut and Chick Pea Soup","url":"http://glutenfreegoddess.blogspot.com/2006/03/african-coconut-chick-pea-soup.html"},{"title":"An Easy Savory Winter Vegetable Ragout","url":"http://glutenfreegoddess.blogspot.com/2006/02/ragout-revisited.html"},{"title":"Artichoke and Jalapeno Savory Pie with Jalapenos","url":"http://glutenfreegoddess.blogspot.com/2008/03/artichoke-jalapeo-savory-pie.html"},{"title":"Baked Brown Rice Risotto","url":"http://glutenfreegoddess.blogspot.com/2006/01/baked-brown-rice-risotto.html"},{"title":"Baked Frittata with Gold Potatoes","url":"http://glutenfreegoddess.blogspot.com/2006/02/baked-frittata-with-gold-potatoes.html"},{"title":"Baked Mac 'n Cheese","url":"http://glutenfreegoddess.blogspot.com/2005/11/baked-mac-cheese-gluten-free.html"},{"title":"Baked Stuffed Shells","url":"http://glutenfreegoddess.blogspot.com/2013/01/gluten-free-stuffed-shells-recipe.html"},{"title":"Balsamic Roasted Veggie Smothered Baked Potato","url":"http://glutenfreegoddess.blogspot.com/2005/12/balsamic-roasted-veggie-smothered.html"},{"title":"Cider Roasted Vegetables","url":"http://glutenfreegoddess.blogspot.com/2005/11/brown-rice-roasted-vegetables.html"},{"title":"Crock Pot Curry","url":"http://glutenfreegoddess.blogspot.com/2007/07/healing-curry.html"},{"title":"Enchiladas Griegos with Spinach and Feta","url":"http://glutenfreegoddess.blogspot.com/2007/03/enchiladas-griegos-for-two.html"},{"title":"Green Chile Egg Bake","url":"http://glutenfreegoddess.blogspot.com/2012/03/green-chile-egg-bake.html"},{"title":"Kicked Up Baked Mac n Cheese","url":"http://glutenfreegoddess.blogspot.com/2006/11/kicked-up-baked-mac-and-cheese.html"},{"title":"Karina's Kicked Up Colcannon","url":"http://glutenfreegoddess.blogspot.com/2008/04/karinas-kicked-up-colcannon.html"},{"title":"Karina's Latkes with Homemade Applesauce","url":"http://glutenfreegoddess.blogspot.com/2006/12/karinas-latkes-and-applesauce.html"},{"title":"Maple Roasted Acorn Squash Stuffed with Cornbread Curried Apple Stuffing","url":"http://glutenfreegoddess.blogspot.com/2008/11/maple-roasted-acorn-squash-and.html"},{"title":"Mediterranean Pasta Frittata with Goat Cheese","url":"http://glutenfreegoddess.blogspot.com/2006/10/autumn-pasta-frittata.html"},{"title":"Pasta Frittata with Kale","url":"http://glutenfreegoddess.blogspot.com/2012/05/gluten-free-pasta-frittata-with-kale.html"},{"title":"Pesto Zucchini Tomato Gratin","url":"http://glutenfreegoddess.blogspot.com/2007/06/pesto-zucchini-tomato-gratin.html"},{"title":"Quinoa Mushroom Pilaf","url":"http://glutenfreegoddess.blogspot.com/2010/01/quinoa-mushroom-pilaf.html"},{"title":"Red Quinoa with Butternut Squash and Cranberries","url":"http://glutenfreegoddess.blogspot.com/2010/01/red-quinoa-with-butternet-squash.html"},{"title":"Roasted Acorn Squash Risotto","url":"http://glutenfreegoddess.blogspot.com/2008/11/roasted-acorn-squash-risotto.html"},{"title":"Roasted Brussels Sprouts Medley with Butter Beans and Rice","url":"http://glutenfreegoddess.blogspot.com/2007/03/earthy-spring-dinner.html"},{"title":"Roasted Corn Chowder","url":"http://glutenfreegoddess.blogspot.com/2006/09/roasted-corn-chowder-with-cilantro.html"},{"title":"Tex-Mex Migas with Crispy Baked Tortilla Chips","url":"http://cookieandkate.com/2015/migas-recipe/"},{"title":"Gluten-Free Buckwheat Waffle","url":"http://cookieandkate.com/2015/gluten-free-buckwheat-waffles/"},{"title":"Savory Butternut Squash and Parmesan Frittata with Fried Sage on top","url":"http://cookieandkate.com/2014/butternut-squash-frittata-with-fried-sage/"},{"title":"Sweet Potato, Red Pepper and Feta Frittata","url":"http://cookieandkate.com/2014/sweet-potato-red-pepper-feta-frittata/"},{"title":"Breakfast Quesadillas with Scrambled Eggs Spinach and Black Beans","url":"http://cookieandkate.com/2014/breakfast-quesadillas-with-scrambled-eggs-spinach-and-black-beans/"},{"title":"Spinach Frittata with Sweet Potato Hash Crust","url":"http://cookieandkate.com/2012/baby-spinach-frittata-with-sweet-potato-hash-crust/"},{"title":"Creamy Cherry Tomato Summer Squash Pasta","url":"http://cookieandkate.com/2015/creamy-cherry-tomato-summer-squash-pasta/"},{"title":"Veggie Sushi Bowl","url":"http://cookieandkate.com/2015/vegetarian-sushi-bowl-recipe/"},{"title":"Mediterranean Quinoa Salad with Roasted Summer Vegetables","url":"http://cookieandkate.com/2015/mediterranean-quinoa-salad-recipe/"},{"title":"Sweet Corn & Black Bean Tacos","url":"http://cookieandkate.com/2015/sweet-corn-and-black-bean-tacos/"},{"title":"Wild Rice and Arugula Salad with Feta","url":"http://cookieandkate.com/2015/arugula-dried-cherry-and-wild-rice-salad-with-a-zippy-lemon-dressing/"},{"title":"Homemade Sun-dried Tomato Pesto Pasta with Roasted Vegetables","url":"http://cookieandkate.com/2015/sun-dried-tomato-pesto-pasta-recipe/"},{"title":"Quinoa Black Bean Tacos with Avocado Crema","url":"http://cookieandkate.com/2015/quinoa-black-bean-tacos-recipe/"},{"title":"Healthy Falafel Veggie Burgers","url":"http://cookieandkate.com/2015/cauliflower-falafel-veggie-burgers/"},{"title":"Easy Asparagus and Pea Risotto","url":"http://cookieandkate.com/2015/pea-and-asparagus-risotto-recipe/"},{"title":"Roasted Cauliflower and Lentil Tacos with Creamy Chipotle Sauce","url":"http://cookieandkate.com/2015/roasted-cauliflower-and-lentil-tacos/"},{"title":"Thai Green Curry with Spring Vegetables","url":"http://cookieandkate.com/2015/thai-green-curry-with-spring-vegetables/"},{"title":"Coconut Curried Kale and Sweet Potato","url":"http://cookieandkate.com/2015/coconut-curried-kale-and-sweet-potato-recipe/"},{"title":"Southwestern Kale Power Salad with Sweet Potato, Quinoa & Avocado Sauce","url":"http://cookieandkate.com/2015/southwestern-kale-power-salad/"},{"title":"Spiced Vegan Lentil Soup","url":"http://cookieandkate.com/2015/vegan-lentil-soup-recipe/"},{"title":"Lemony Roasted Cauliflower Risotto","url":"http://cookieandkate.com/2015/lemony-roasted-cauliflower-risotto/"},{"title":"Creamy Roasted Brussels Sprout and Quinoa Gratin","url":"http://cookieandkate.com/2015/brussels-sprout-quinoa-gratin/"},{"title":"Spicy Sweet Potato and Green Rice Burrito Bowls","url":"http://cookieandkate.com/2015/vegan-sweet-potato-green-rice-burrito-bowls/"},{"title":"Butternut Squash Frittata with Fried Sage","url":"http://cookieandkate.com/2014/butternut-squash-frittata-with-fried-sage/"},{"title":"Easy Brown Rice Risotto with Mushrooms and Fresh Oregano","url":"http://cookieandkate.com/2014/easy-brown-rice-risotto-with-mushrooms-and-fresh-oregano/"},{"title":"No Noodle Pad Thai","url":"http://cookieandkate.com/2014/no-noodle-pad-thai/"},{"title":"Caramelized Sweet Potato, Red Pepper and Feta Frittat","url":"http://cookieandkate.com/2014/sweet-potato-red-pepper-feta-frittata/"},{"title":"Roasted Red Pepper Tortilla Soup","url":"http://cookieandkate.com/2014/roasted-red-pepper-tortilla-soup/"},{"title":"Grilled Summer Salad with Corn, Peppers and Chili-Lime Dressing","url":"http://cookieandkate.com/2014/vegetarian-grilled-summer-salad-with-corn-peppers-and-chili-lime-dressing/"},{"title":"Baked Eggs on a Bed of Roasted Cherry Tomatoes","url":"http://cookieandkate.com/2014/baked-eggs-on-roasted-cherry-tomatoes/"},{"title":"Pesto Squash Noodles and Spaghetti with Burst Cherry Tomatoes","url":"http://cookieandkate.com/2014/pesto-squash-noodles-and-spaghetti-with-burst-cherry-tomatoes/"},{"title":"Strawberry and Spinach Salad with Quinoa and Goat Cheese","url":"http://cookieandkate.com/2014/strawberry-and-spinach-salad-with-quinoa-and-goat-cheese/"},{"title":"Thai Mango Cabbage Wraps with Crispy Tofu and Peanut Sauce","url":"http://cookieandkate.com/2014/thai-mango-cabbage-wraps/"},{"title":"Feta Fiesta Kale Salad with Avocado and Crispy Tortilla Strips","url":"http://cookieandkate.com/2014/feta-fiesta-kale-salad-with-avocado-and-crispy-tortilla-strips/"},{"title":"Spicy Kale and Coconut Stir Fry","url":"http://cookieandkate.com/2014/spicy-kale-and-coconut-stir-fry/"},{"title":"Socca Pizza with Summer Squash and Feta","url":"http://cookieandkate.com/2014/socca-pizza-with-summer-squash-and-feta/"},{"title":"Fresh Arugula and Black Bean Tacos with Pickled Radish and Feta","url":"http://cookieandkate.com/2014/fresh-arugula-and-black-bean-tacos-with-pickled-radish-and-feta/"},{"title":"Lentil-Chickpea Veggie Burgers with Avocado Green Harissa","url":"http://cookieandkate.com/2014/lentil-chickpea-veggie-burgers-with-avocado-green-harissa/"},{"title":"Breakfast Quesadillas with Scrambled Eggs, Spinach and Black Beans","url":"http://cookieandkate.com/2014/breakfast-quesadillas-with-scrambled-eggs-spinach-and-black-beans/"},{"title":"Lemony Lentil and Chickpea Salad with Radish and Herb","url":"http://cookieandkate.com/2014/lemony-lentil-and-chickpea-salad-with-radish-and-herbs/"},{"title":"Roasted Brussels Sprouts and Crispy Baked Tofu with Honey-Sesame Glaze","url":"http://cookieandkate.com/2014/roasted-brussels-sprouts-and-crispy-baked-tofu-with-honey-sesame-glaze/"},{"title":"Spring Carrot, Radish and Quinoa Salad with Herbed Avocado","url":"http://cookieandkate.com/2014/spring-carrot-radish-and-quinoa-salad-with-herbed-avocado/"},{"title":"Redeeming Green Soup with Lemon and Cayenne","url":"http://cookieandkate.com/2014/redeeming-green-soup-with-lemon-and-cayenne/"},{"title":"Quick Vegan Chana Masala","url":"http://cookieandkate.com/2014/quick-vegan-chana-masala/"},{"title":"Creamy (vegan) Butternut Squash Linguine with Fried","url":"http://cookieandkate.com/2014/fresh-arugula-and-black-bean-tacos-with-pickled-radish-and-feta/"},{"title":"Greek Salad with Broccoli and Sun-Dried Tomatoes","url":"http://cookieandkate.com/2014/greek-salad-with-broccoli-and-sun-dried-tomatoes/"},{"title":"Sweet Potato and Black Bean Tacos with Avocado-Pepita Dip","url":"http://cookieandkate.com/2014/sweet-potato-and-black-bean-tacos-with-avocado-pepita-dip/"},{"title":"Tomatillo Black Bean Tostadas","url":"http://cookieandkate.com/2012/baked-tostadas-with-tomatillo-black-bean-salsa/"},{"title":"Roasted Garlic and White Bean Hummus","url":"http://cookieandkate.com/2012/roasted-garlic-and-white-bean-hummus-recipe/"},{"title":"Red Pepper Pesto with Roasted Cauliflower","url":"http://cookieandkate.com/2012/red-pepper-pesto-recipe/"},{"title":"Spicy Sweet Potato Hummus","url":"http://cookieandkate.com/2011/spicy-sweet-potato-hummus/"},{"title":"Indian Spiced Chickpeas","url":"http://cookieandkate.com/2011/spicy-indian-baked-chickpeas/"},{"title":"Crispy Baked Sweet Potato Fries","url":"http://cookieandkate.com/2010/baked-sweet-potato-fries/"},{"title":"Quinoa Vegetable Soup with Kale","url":"http://cookieandkate.com/2015/quinoa-vegetable-soup-recipe/"},{"title":"Thai Green Curry with Spring Vegetables","url":"http://cookieandkate.com/2015/thai-green-curry-with-spring-vegetables/"},{"title":"Coconut Curried Kale and Sweet Potato","url":"http://cookieandkate.com/2015/coconut-curried-kale-and-sweet-potato-recipe/"},{"title":"Spiced Vegan Lentil Soup","url":"http://cookieandkate.com/2015/vegan-lentil-soup-recipe/"},{"title":"Creamy Vegan Pumpkin Soup","url":"http://cookieandkate.com/2014/creamy-vegan-pumpkin-soup/"},{"title":"Thai Curried Butternut Squash Soup","url":"http://cookieandkate.com/2014/thai-curried-butternut-squash-soup/"},{"title":"Butternut Squash Chipotle Chili with Avocado","url":"http://cookieandkate.com/2012/butternut-squash-chipotle-chili-with-avocado/"},{"title":"Thai Green Curry","url":"http://cookieandkate.com/2012/vegetarian-thai-green-curry/"},{"title":"Tomato and Lentil Curry","url":"http://cookieandkate.com/2012/vegan-tomato-and-lentil-curry/"},{"title":"Roasted Red Pepper and Tomato Soup","url":"http://cookieandkate.com/2011/roasted-red-pepper-and-tomato-soup/"},{"title":"Vegetarian Sweet Potato Chili","url":"http://cookieandkate.com/images/2011/01/sweet-potato-chili-recipe/"},{"title":"Quinoa Broccoli Slaw with Honey-Mustard Dressing","url":"http://cookieandkate.com/2015/quinoa-broccoli-slaw-recipe/"},{"title":"Colorful Beet Salad with Carrot, Quinoa & Spinach","url":"http://cookieandkate.com/2015/raw-beet-salad-with-carrot-quinoa-spinach/"},{"title":"Greek Broccoli Salad","url":"http://cookieandkate.com/2015/greek-broccoli-salad-recipe/"},{"title":"Creamy Roasted Brussels Sprout and Quinoa Gratin","url":"http://cookieandkate.com/2015/brussels-sprout-quinoa-gratin/"},{"title":"Autumn Kale Salad with Fennel, Honeycrisp and Goat Cheese","url":"http://cookieandkate.com/2014/autumn-kale-salad-with-fennel-honeycrisp-and-goat-cheese/"},{"title":"Crispy Baked Falafel","url":"http://cookieandkate.com/2012/baked-falafel/"}]
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 40 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

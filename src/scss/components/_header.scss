@@ -1,5 +1,7 @@
 @import '../base/variables.scss';
+@import '../base/mixins.scss';
 
 .title {
   color: $pink-dark;
+  @include size(100%, 300px);
 }

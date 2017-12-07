@@ -1,7 +1,6 @@
 @import 'variables.scss';
 
 // Breakpoint mixin
-
 @mixin breakpoint($class) {
   @if $class == mobile-s {
     @media (max-width: 320px) { @content; }
@@ -23,5 +22,10 @@
     @warn "Breakpoint mixin supports: mobile-s, mobile, tablet, desktop";
   }
 }
-
 // eg @include breakpoint(mobile) { ... }
+
+// Size mixin
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
