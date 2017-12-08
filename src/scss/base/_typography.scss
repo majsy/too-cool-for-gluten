@@ -1,0 +1,46 @@
+// typography
+
+.display1,
+.display2,
+.display3 {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: 0.8px;
+}
+
+.display1 {
+  font-style: italic;
+  font-size: 60px;
+  font-weight: 900i;
+  color: $white;
+}
+
+.display2 {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.display3 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.5;
+
+  @include breakpoint(mobile) {
+    font-size: 24px;
+  }
+}
+
+.copy,
+.btnText {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.67;
+  letter-spacing: 0.5px;
+  color: $red;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.btnText {
+  font-weight: 600;
+}

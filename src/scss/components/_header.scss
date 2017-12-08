@@ -1,7 +1,34 @@
 @import '../base/variables.scss';
 @import '../base/mixins.scss';
 
+.header {
+  height: 0;
+  padding: 20px;
+  background-color: $red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 600ms $expo-ease-out;
+
+  &.isShowing {
+    opacity: 1;
+    height: 200px;
+
+    @include breakpoint(mobile) {
+      height: 150px;
+    }
+  }
+}
+
 .title {
-  color: $pink-dark;
-  @include size(100%, 300px);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 800ms $expo-ease-out;
+  transition-delay: 400ms;
+
+  &.isShowing {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

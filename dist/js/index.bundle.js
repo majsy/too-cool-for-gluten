@@ -18343,7 +18343,8 @@ var App = function (_React$Component) {
     };
 
     _this.state = {
-      currentRecipe: null
+      currentRecipe: null,
+      isLoaded: false
     };
     return _this;
   }
@@ -18352,6 +18353,15 @@ var App = function (_React$Component) {
     key: '__handleClick__REACT_HOT_LOADER__',
     value: function __handleClick__REACT_HOT_LOADER__() {
       return this.__handleClick__REACT_HOT_LOADER__.apply(this, arguments);
+    }
+  }, {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      setTimeout(function () {
+        _this2.setState({ isLoaded: true });
+      }, 300);
     }
   }, {
     key: 'getRecipe',
@@ -18372,9 +18382,8 @@ var App = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         { className: 'app-container' },
-        _react2.default.createElement(_Header2.default, null),
-        _react2.default.createElement(_About2.default, null),
-        _react2.default.createElement(_Button2.default, { handleClick: this.handleClick }),
+        _react2.default.createElement(_Header2.default, { headerIsShowing: this.state.isLoaded }),
+        _react2.default.createElement(_Button2.default, { handleClick: this.handleClick, buttonIsShowing: this.state.isLoaded }),
         _react2.default.createElement(_RecipeContainer2.default, { currentRecipe: this.state.currentRecipe })
       );
     }
@@ -18446,16 +18455,11 @@ var Header = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        null,
+        { className: 'header ' + (this.props.headerIsShowing ? 'isShowing' : '') },
         _react2.default.createElement(
           'h1',
-          { className: 'title' },
+          { className: 'title display1 ' + (this.props.headerIsShowing ? 'isShowing' : '') },
           _app2.default.title
-        ),
-        _react2.default.createElement(
-          'p',
-          { className: 'subhead' },
-          _app2.default.subhead
         )
       );
     }
@@ -18626,9 +18630,13 @@ var Button = function (_React$Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'button',
-        { className: 'button', onClick: this.handleClick },
-        _app2.default.button
+        'div',
+        { className: 'button-container' },
+        _react2.default.createElement(
+          'button',
+          { className: 'button btnText ' + (this.props.buttonIsShowing ? 'isShowing' : ''), onClick: this.handleClick },
+          _app2.default.button
+        )
       );
     }
   }]);
@@ -18656,7 +18664,7 @@ var _temp2 = function () {
 /* 33 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: \n  border: 1px solid $pink-dark;\n                   ^\n      Undefined variable: \"$pink-dark\".\n      in /Users/madeleineauvinen/Documents/projects/2cool4gluten/src/scss/components/_button.scss (line 12, column 21)\n    at runLoaders (/Users/madeleineauvinen/Documents/projects/2cool4gluten/node_modules/webpack/lib/NormalModule.js:195:19)\n    at /Users/madeleineauvinen/Documents/projects/2cool4gluten/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /Users/madeleineauvinen/Documents/projects/2cool4gluten/node_modules/loader-runner/lib/LoaderRunner.js:230:18\n    at context.callback (/Users/madeleineauvinen/Documents/projects/2cool4gluten/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Object.asyncSassJobQueue.push [as callback] (/Users/madeleineauvinen/Documents/projects/2cool4gluten/node_modules/sass-loader/lib/loader.js:55:13)\n    at Object.<anonymous> (/Users/madeleineauvinen/Documents/projects/2cool4gluten/node_modules/async/dist/async.js:2257:31)\n    at Object.callback (/Users/madeleineauvinen/Documents/projects/2cool4gluten/node_modules/async/dist/async.js:958:16)\n    at options.error (/Users/madeleineauvinen/Documents/projects/2cool4gluten/node_modules/node-sass/lib/index.js:294:32)");
 
 /***/ }),
 /* 34 */
@@ -18804,7 +18812,7 @@ var RecipeLink = function (_React$Component) {
 
       return _react2.default.createElement(
         'a',
-        { className: 'recipe-link', href: url, target: '_blank' },
+        { className: 'recipe-link display3', href: url, target: '_blank' },
         title
       );
     }
@@ -18833,7 +18841,7 @@ var _temp = function () {
 /* 37 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: \n  color: $pink-dark;\n        ^\n      Undefined variable: \"$pink-dark\".\n      in /Users/madeleineauvinen/Documents/projects/2cool4gluten/src/scss/components/_recipe-link.scss (line 5, column 10)\n    at runLoaders (/Users/madeleineauvinen/Documents/projects/2cool4gluten/node_modules/webpack/lib/NormalModule.js:195:19)\n    at /Users/madeleineauvinen/Documents/projects/2cool4gluten/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /Users/madeleineauvinen/Documents/projects/2cool4gluten/node_modules/loader-runner/lib/LoaderRunner.js:230:18\n    at context.callback (/Users/madeleineauvinen/Documents/projects/2cool4gluten/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Object.asyncSassJobQueue.push [as callback] (/Users/madeleineauvinen/Documents/projects/2cool4gluten/node_modules/sass-loader/lib/loader.js:55:13)\n    at Object.<anonymous> (/Users/madeleineauvinen/Documents/projects/2cool4gluten/node_modules/async/dist/async.js:2257:31)\n    at Object.callback (/Users/madeleineauvinen/Documents/projects/2cool4gluten/node_modules/async/dist/async.js:958:16)\n    at options.error (/Users/madeleineauvinen/Documents/projects/2cool4gluten/node_modules/node-sass/lib/index.js:294:32)");
 
 /***/ }),
 /* 38 */
@@ -18851,7 +18859,7 @@ module.exports = [{"title":"Coconut Hot and Sour Soup","url":"http://www.wheatfr
 /* 40 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: \n  color: $pink-dark;\n        ^\n      Undefined variable: \"$pink-dark\".\n      in /Users/madeleineauvinen/Documents/projects/2cool4gluten/src/scss/base/_typography.scss (line 38, column 10)\n    at runLoaders (/Users/madeleineauvinen/Documents/projects/2cool4gluten/node_modules/webpack/lib/NormalModule.js:195:19)\n    at /Users/madeleineauvinen/Documents/projects/2cool4gluten/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /Users/madeleineauvinen/Documents/projects/2cool4gluten/node_modules/loader-runner/lib/LoaderRunner.js:230:18\n    at context.callback (/Users/madeleineauvinen/Documents/projects/2cool4gluten/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Object.asyncSassJobQueue.push [as callback] (/Users/madeleineauvinen/Documents/projects/2cool4gluten/node_modules/sass-loader/lib/loader.js:55:13)\n    at Object.<anonymous> (/Users/madeleineauvinen/Documents/projects/2cool4gluten/node_modules/async/dist/async.js:2257:31)\n    at Object.callback (/Users/madeleineauvinen/Documents/projects/2cool4gluten/node_modules/async/dist/async.js:958:16)\n    at options.error (/Users/madeleineauvinen/Documents/projects/2cool4gluten/node_modules/node-sass/lib/index.js:294:32)");
 
 /***/ })
 /******/ ]);

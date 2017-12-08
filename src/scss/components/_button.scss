@@ -1,12 +1,27 @@
 @import '../base/_variables.scss';
 @import '../base/_mixins.scss';
 
-.button {
-  border: 2px solid $pink-dark;
-  background-color: $white;
-  width: 80px;
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
 
-  @include breakpoint(mobile) {
-    border: 2px solid $purple;
+.button {
+  border: 2px solid $red;
+  background-color: $white;
+  color: $red;
+  border-radius: 25px;
+  font-size: 16px;
+  @include size(140px, 50px);
+  opacity: 0;
+  transition: all 800ms $expo-ease-out;
+  transform: translateY(30px);
+  transition-delay: 700ms;
+
+  &.isShowing {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

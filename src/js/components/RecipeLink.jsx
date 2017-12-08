@@ -8,7 +8,7 @@ export default class RecipeLink extends React.Component {
     const url = this.props.url;
 
     return (
-      <a className="recipe-link" href={url} target="_blank">{title}</a>
+      <a className="recipe-link cta display3" href={url} target="_blank">{title}</a>
     )
   }
 }

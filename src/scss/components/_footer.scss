@@ -1,0 +1,15 @@
+@import '../base/_variables.scss';
+@import '../base/_mixins.scss';
+
+.footer {
+  @include size(100%, 40px);
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  .cta {
+    margin-right: 20px;
+  }
+}

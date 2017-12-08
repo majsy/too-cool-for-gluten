@@ -3,6 +3,7 @@ import Header from './Header.jsx'
 import About from './About.jsx'
 import Button from './Button.jsx'
 import RecipeContainer from './RecipeContainer.jsx'
+import Footer from './Footer.jsx'
 import recipes from '../../../static/data/recipes.json'
 import styles from '../../scss/base/_global.scss'
 
@@ -11,8 +12,15 @@ export default class App extends React.Component {
     super();
 
     this.state = {
-      currentRecipe: null
+      currentRecipe: null,
+      isLoaded: false
     }
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({isLoaded: true})
+    }, 300)
   }
 
   getRecipe() {
@@ -31,10 +39,11 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="app-container">
-        <Header />
-        <About />
-        <Button handleClick={this.handleClick} />
+        <Header headerIsShowing={this.state.isLoaded} />
+        {/* <About /> */}
+        <Button handleClick={this.handleClick} buttonIsShowing={this.state.isLoaded} />
         <RecipeContainer currentRecipe={this.state.currentRecipe}/>
+        <Footer />
       </div>
     )
   }

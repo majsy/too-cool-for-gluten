@@ -1,6 +1,10 @@
 @import '../base/variables.scss';
 
 .recipe-link {
-  text-decoration: none;
-  color: $pink-dark;
+  color: $red;
+  text-align: center;
+
+  &:hover {
+
+  }
 }
