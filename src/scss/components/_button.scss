@@ -6,22 +6,28 @@
   justify-content: center;
   align-items: center;
   margin-top: 100px;
-}
-
-.button {
-  border: 2px solid $red;
-  background-color: $white;
-  color: $red;
-  border-radius: 25px;
-  font-size: 16px;
-  @include size(140px, 50px);
   opacity: 0;
   transition: all 800ms $expo-ease-out;
   transform: translateY(30px);
-  transition-delay: 700ms;
+  transition-delay: 1250ms;
 
   &.isShowing {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+.button {
+  border: 3px solid $red;
+  background-color: $white;
+  color: $red;
+  border-radius: 25px;
+  font-size: 16px;
+  @include size(160px, 55px);  
+  text-transform: uppercase;
+  transition: all 800ms $expo-ease-out;
+
+  &:hover {
+    transform: scale(1.1);
   }
 }

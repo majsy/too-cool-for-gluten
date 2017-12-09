@@ -9,8 +9,8 @@ export default class Button extends React.Component {
 
   render() {
     return (
-      <div className="button-container">
-        <button className={`button btnText ${this.props.buttonIsShowing ? 'isShowing' : ''}`} onClick={this.handleClick}>{data.button}</button>
+      <div className={`button-container ${this.props.buttonIsShowing ? 'isShowing' : ''}`}>
+        <button className="button btnText" onClick={this.handleClick}>{data.button}</button>
       </div>
     )
   }

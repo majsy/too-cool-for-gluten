@@ -6,8 +6,8 @@ export default class Header extends React.Component {
   render() {
     return (
       <div className={`header ${this.props.headerIsShowing ? 'isShowing' : ''}`}>
-        <h1 className={`title display1 ${this.props.headerIsShowing ? 'isShowing' : ''}`}>{data.title}</h1>
-        {/* <p className="subhead">{data.subhead}</p> */}
+        <h1 className="title display1">{data.title}</h1>
+        <p className="subhead display4">{data.subhead}</p>
       </div>
     )
   }

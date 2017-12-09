@@ -32,13 +32,22 @@
 }
 
 .copy,
-.btnText {
+.btnText,
+.display4 {
   font-family: 'Open Sans', sans-serif;
   line-height: 1.67;
   letter-spacing: 0.5px;
   color: $red;
   font-weight: 400;
   font-size: 14px;
+  margin: 0;
+}
+
+.display4 {
+  font-weight: 300i;
+  color: $white; 
+  font-style: italic;
+  margin-top: 20px;
 }
 
 .btnText {

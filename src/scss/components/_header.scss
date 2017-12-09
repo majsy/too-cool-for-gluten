@@ -5,9 +5,11 @@
   height: 0;
   padding: 20px;
   background-color: $red;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   opacity: 0;
   transition: all 600ms $expo-ease-out;
 
@@ -21,13 +23,21 @@
   }
 }
 
-.title {
+.title,
+.subhead {
   opacity: 0;
   transform: translateY(30px);
   transition: all 800ms $expo-ease-out;
-  transition-delay: 400ms;
+  transition-delay: 400ms;  
+}
 
-  &.isShowing {
+.subhead {
+  transition-delay: 600ms;
+}
+
+.isShowing {
+  .title,
+  .subhead {
     opacity: 1;
     transform: translateY(0);
   }

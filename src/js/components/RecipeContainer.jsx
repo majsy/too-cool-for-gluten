@@ -15,7 +15,6 @@ export default class RecipeContainer extends React.Component {
   render() {
     return (
       <div className={`recipe-container ${this.props.currentRecipe ? 'isShowing' : ''}`}>
-        <p>{data.recipeDescription}</p>
 
         { this.displayCurrentRecipe() }
       </div>  
