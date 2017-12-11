@@ -1,0 +1,12 @@
+@import '../base/variables.scss';
+@import '../base/mixins.scss';
+@import '../base/ui.scss';
+
+.button-about {
+  border: none;
+  background-color: transparent;
+  font-weight: 900;
+  font-size: 36px;
+  font-family: 'Lato', sans-serif;
+  width: auto;
+}

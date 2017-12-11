@@ -1,5 +1,6 @@
 @import '../base/variables.scss';
 @import '../base/mixins.scss';
+@import '../base/ui.scss';
 
 .button-container {
   display: flex;
@@ -20,15 +21,9 @@
 .button {
   border: 3px solid $red;
   background-color: $white;
-  color: $red;
   border-radius: 25px;
   @include size(160px, 55px);  
   text-transform: uppercase;
-  transition: all 800ms $expo-ease-out;
-
-  &:hover {
-    transform: scale(1.1);
-  }
 
   @include breakpoint(mobile) {
     @include size(150px, 50px);

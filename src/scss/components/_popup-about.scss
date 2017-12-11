@@ -1,0 +1,22 @@
+@import '../base/variables.scss';
+@import '../base/_mixins.scss';
+
+.popup-container {
+  opacity: 0;
+  @include size(350px, 300px);
+  background-color: $white;
+  transform: translate3d(0, 100px, 0);
+  transition: all 800ms $expo-ease-out;
+  z-index: -1;
+  position: absolute;
+  bottom: 10%;
+  border-radius: 25px;
+  left: 20px;
+  border: 2px solid $red;
+
+  &.isOpen {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    z-index: 1;
+  }
+}

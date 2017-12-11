@@ -1,9 +1,9 @@
 import React from 'react';
 import Header from './Header.jsx'
-import About from './About.jsx'
 import Button from './Button.jsx'
 import RecipeContainer from './RecipeContainer.jsx'
 import Footer from './Footer.jsx'
+import PopupAbout from './PopupAbout.jsx'
 import recipes from '../../../static/data/recipes.json'
 import styles from '../../scss/components/_app.scss'
 
@@ -13,7 +13,8 @@ export default class App extends React.Component {
 
     this.state = {
       currentRecipe: null,
-      isLoaded: false
+      isLoaded: false,
+      popupIsOpen: false
     }
   }
 
@@ -32,6 +33,10 @@ export default class App extends React.Component {
     )
   }
 
+  handleIconClick = () => {
+    this.setState({popupIsOpen: !this.state.popupIsOpen})
+  }
+
   handleClick = () => {
     this.getRecipe()
   }
@@ -40,10 +45,10 @@ export default class App extends React.Component {
     return (
       <div className="app-container">
         <Header headerIsShowing={this.state.isLoaded} />
-        {/* <About /> */}
         <Button handleClick={this.handleClick} buttonIsShowing={this.state.isLoaded} />
         <RecipeContainer currentRecipe={this.state.currentRecipe}/>
-        <Footer />
+        <Footer handleIconClick={this.handleIconClick} />
+        <PopupAbout popupIsOpen={this.state.popupIsOpen} />
       </div>
     )
   }

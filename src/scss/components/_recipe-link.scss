@@ -1,10 +1,7 @@
 @import '../base/variables.scss';
+@import '../base/ui.scss';
 
 .recipe-link {
   color: $red;
   text-align: center;
-
-  &:hover {
-
-  }
 }
