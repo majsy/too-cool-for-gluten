@@ -5,7 +5,7 @@ import Button from './Button.jsx'
 import RecipeContainer from './RecipeContainer.jsx'
 import Footer from './Footer.jsx'
 import recipes from '../../../static/data/recipes.json'
-import styles from '../../scss/base/_global.scss'
+import styles from '../../scss/components/_app.scss'
 
 export default class App extends React.Component {
   constructor() {

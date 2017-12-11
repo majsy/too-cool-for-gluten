@@ -1,5 +1,4 @@
-@import '../base/_variables.scss';
-@import '../base/_mixins.scss';
+@import '../base/mixins.scss';
 
 .footer {
   @include size(100%, 40px);

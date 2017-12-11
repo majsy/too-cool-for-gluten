@@ -1,5 +1,4 @@
 // typography
-
 .display1,
 .display2,
 .display3 {
@@ -14,6 +13,20 @@
   font-size: 60px;
   font-weight: 900i;
   color: $white;
+
+  @include breakpoint(tablet) {
+    margin-top: 10px;
+    font-size: 50px;
+  }
+
+  @include breakpoint(mobile) {
+    margin-top: 10px;
+    font-size: 36px;
+  }
+
+  @include breakpoint(mobile-s) {
+    font-size: 32px;
+  }
 }
 
 .display2 {
@@ -47,9 +60,17 @@
   font-weight: 300i;
   color: $white; 
   font-style: italic;
-  margin-top: 20px;
+
+  @include breakpoint(mobile) {
+    font-size: 13px;
+  }
 }
 
 .btnText {
   font-weight: 600;
+  font-size: 16px;
+
+  @include breakpoint(mobile) {
+    font-size: 14px;
+  }
 }

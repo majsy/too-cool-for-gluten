@@ -1,12 +1,4 @@
-// Base
 @import 'base/variables.scss';
 @import 'base/mixins.scss';
-@import 'base/typography.scss';
 @import 'base/global.scss';
-@import 'base/ui.scss';
-
-// Components
-@import 'components/recipe-link.scss';
-@import 'components/recipe-container.scss';
-@import 'components/button.scss';
-@import 'components/header.scss';
+@import 'base/typography.scss';

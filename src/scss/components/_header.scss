@@ -33,6 +33,11 @@
 
 .subhead {
   transition-delay: 600ms;
+  margin-top: 20px;
+
+  @include breakpoint(mobile) {
+    margin-top: 10px;
+  }
 }
 
 .isShowing {
