@@ -5,7 +5,7 @@ import RecipeContainer from './RecipeContainer.jsx'
 import Footer from './Footer.jsx'
 import PopupAbout from './PopupAbout.jsx'
 import Egg from './Egg.jsx'
-import recipes from '../../../static/data/recipes.json'
+// import recipes from '../../../static/data/recipes.json'
 import styles from '../../scss/components/_app.scss'
 
 export default class App extends React.Component {
@@ -13,7 +13,8 @@ export default class App extends React.Component {
     super();
 
     this.state = {
-      data: {},
+      recipes: [],
+      app: {},
       currentRecipe: null,
       isLoaded: false,
       popupIsOpen: false,
@@ -26,9 +27,32 @@ export default class App extends React.Component {
     setTimeout(() => {
       this.setState({isLoaded: true})
     }, 300)
+    this.loadData();
+  }
+
+  loadData() {
+    const recipes ='/static/data/recipes.json';
+    const app ='/static/data/app.json';
+
+    fetch(recipes)
+    .then(response => {
+      if (response) {
+        // console.log(response)
+        return response.json()
+        console.log(response)
+      }
+      else {
+        console.log('an error occured')
+      }
+    })
+    .then((recipes) => {
+      console.log(recipes)
+      this.setState({ recipes: recipes})
+    })
   }
 
   getRecipe() {
+    const recipes = this.state.recipes;
     const randomIndex = Math.floor(Math.random() * recipes.length)
     const currentRecipe = recipes[randomIndex];
 
