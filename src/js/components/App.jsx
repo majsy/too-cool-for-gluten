@@ -4,6 +4,7 @@ import Button from './Button.jsx'
 import RecipeContainer from './RecipeContainer.jsx'
 import Footer from './Footer.jsx'
 import PopupAbout from './PopupAbout.jsx'
+import Egg from './Egg.jsx'
 import recipes from '../../../static/data/recipes.json'
 import styles from '../../scss/components/_app.scss'
 
@@ -12,9 +13,12 @@ export default class App extends React.Component {
     super();
 
     this.state = {
+      data: {},
       currentRecipe: null,
       isLoaded: false,
-      popupIsOpen: false
+      popupIsOpen: false,
+      buttonClick: 0,
+      eggIsOpen: false
     }
   }
 
@@ -29,8 +33,25 @@ export default class App extends React.Component {
     const currentRecipe = recipes[randomIndex];
 
     return (
-      this.setState({currentRecipe: currentRecipe})
+      this.setState({currentRecipe: currentRecipe}),
+      this.setState({buttonClick: this.state.buttonClick + 1})
     )
+  }
+
+  countButtonClick() {
+    if (this.state.buttonClick === 11) {
+      console.log('surprise!')
+      this.setState({buttonClick: 0})
+      this.openEgg();
+    }
+  }
+
+  openEgg() {
+    this.setState({eggIsOpen: true})
+  }
+
+  closeEgg() {
+    this.setState({eggIsOpen: false})
   }
 
   handleIconClick = () => {
@@ -39,6 +60,7 @@ export default class App extends React.Component {
 
   handleClick = () => {
     this.getRecipe()
+    this.countButtonClick()
   }
 
   render() {
@@ -49,6 +71,7 @@ export default class App extends React.Component {
         <RecipeContainer currentRecipe={this.state.currentRecipe}/>
         <Footer handleIconClick={this.handleIconClick} />
         <PopupAbout popupIsOpen={this.state.popupIsOpen} />
+        <Egg eggIsOpen={this.state.eggIsOpen} />
       </div>
     )
   }
