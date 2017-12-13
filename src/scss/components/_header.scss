@@ -12,6 +12,7 @@
   flex-direction: column;
   opacity: 0;
   transition: all 600ms $expo-ease-out;
+  transition-delay: 300ms;
 
   &.isShowing {
     opacity: 1;
@@ -28,12 +29,12 @@
   opacity: 0;
   transform: translateY(30px);
   transition: all 800ms $expo-ease-out;
-  transition-delay: 400ms;  
+  transition-delay: 700ms;  
   text-align: center;
 }
 
 .subhead {
-  transition-delay: 600ms;
+  transition-delay: 900ms;
   margin-top: 20px;
 
   @include breakpoint(mobile) {

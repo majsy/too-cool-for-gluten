@@ -15,7 +15,7 @@ const json = require('./static/data/app.json', './static/data/recipes.json');
 const output = path.resolve(__dirname + '/dist/');
 
 module.exports = {
-  entry: './src/js/index.js',
+  entry: ['whatwg-fetch', './src/js/index.js'],
   output: {
     path: output,
     filename: 'js/index.bundle.js'

@@ -5,54 +5,70 @@ import RecipeContainer from './RecipeContainer.jsx'
 import Footer from './Footer.jsx'
 import PopupAbout from './PopupAbout.jsx'
 import Egg from './Egg.jsx'
-// import recipes from '../../../static/data/recipes.json'
+import Loader from './Loader.jsx'
 import styles from '../../scss/components/_app.scss'
+import {END_POINT} from "../common/end-points";
 
 export default class App extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      recipes: [],
-      app: {},
       currentRecipe: null,
-      isLoaded: false,
+      dataIsLoaded: false,
+      appData: null,
+      recipeData: null,
       popupIsOpen: false,
       buttonClick: 0,
-      eggIsOpen: false
+      eggIsOpen: false,
+      displayContent: false
     }
   }
 
   componentDidMount() {
-    setTimeout(() => {
-      this.setState({isLoaded: true})
-    }, 300)
-    this.loadData();
+    if (!this.state.dataIsLoaded) this.loadData();
   }
 
   loadData() {
-    const recipes ='/static/data/recipes.json';
-    const app ='/static/data/app.json';
+    if (this.state.dataIsLoaded) return;
 
-    fetch(recipes)
-    .then(response => {
-      if (response) {
-        // console.log(response)
-        return response.json()
-        console.log(response)
-      }
-      else {
-        console.log('an error occured')
-      }
-    })
-    .then((recipes) => {
-      console.log(recipes)
-      this.setState({ recipes: recipes})
-    })
+    this.loadAppData()
+      .then(this.loadRecipeData)
+      .then(() => {
+        console.log('all loaded!', this.state);
+        this.setState({dataIsLoaded: true})
+      })
+      .catch((e) => {
+        // something went wrong with loadAppData(); 
+      })
+  }
+
+  loadAppData = () => {
+    return fetch(END_POINT.APP)
+      .then(response => {
+        if (response.status === 200) {
+          return response.json()
+        }
+      })
+      .then((appData) => {
+        this.setState({appData})
+      })
+  }
+
+  loadRecipeData = () => {
+    return fetch(END_POINT.RECIPES)
+      .then(response => {
+        if (response.status === 200) {
+          return response.json()
+        }
+      })
+      .then((recipeData) => {
+        this.setState({recipeData})
+      })
   }
 
   getRecipe() {
-    const recipes = this.state.recipes;
+    const recipes = this.state.recipeData;
     const randomIndex = Math.floor(Math.random() * recipes.length)
     const currentRecipe = recipes[randomIndex];
 
@@ -90,13 +106,19 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="app-container">
-        <Header headerIsShowing={this.state.isLoaded} />
-        <Button handleClick={this.handleClick} buttonIsShowing={this.state.isLoaded} />
-        <RecipeContainer currentRecipe={this.state.currentRecipe}/>
-        <Footer handleIconClick={this.handleIconClick} />
-        <PopupAbout popupIsOpen={this.state.popupIsOpen} />
+        <Header data={this.state.appData} />
+        <Button handleClick={this.handleClick} 
+          data={this.state.appData} />
+        <RecipeContainer currentRecipe={this.state.currentRecipe} />
+        <Footer handleIconClick={this.handleIconClick} 
+          data={this.state.appData} />
+        <PopupAbout popupIsOpen={this.state.popupIsOpen} 
+          data={this.state.appData} />
         <Egg eggIsOpen={this.state.eggIsOpen} />
+    
+        { !this.state.dataIsLoaded ? <Loader /> : null }
       </div>
+        
     )
   }
 }

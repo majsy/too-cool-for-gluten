@@ -1,5 +1,4 @@
 import React from 'react';
-import data from '../../../static/data/app.json'
 import styles from '../../scss/components/_button-about.scss'
 
 export default class ButtonAbout extends React.Component {

@@ -1,5 +1,4 @@
 import React from 'react';
-import data from '../../../static/data/app.json'
 import styles from '../../scss/components/_recipe-link.scss'
 
 export default class RecipeLink extends React.Component {

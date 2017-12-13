@@ -1,5 +1,4 @@
 import React from 'react';
-import data from '../../../static/data/app.json'
 import styles from '../../scss/components/_recipe-container.scss'
 import RecipeLink from './RecipeLink.jsx'
 

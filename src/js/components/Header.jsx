@@ -1,13 +1,24 @@
 import React from 'react';
-import data from '../../../static/data/app.json'
 import styles from '../../scss/components/_header.scss'
 
 export default class Header extends React.Component {
-  render() {
+  renderContentHeader() {
+    const data = this.props.data;
+    
     return (
-      <div className={`header ${this.props.headerIsShowing ? 'isShowing' : ''}`}>
+      <div>
         <h1 className="title display1">{data.title}</h1>
         <p className="subhead display4">{data.subhead}</p>
+      </div>
+    )
+  }
+
+  render() {
+    const data = this.props.data;
+
+    return (
+      <div className={`header ${data ? 'isShowing' : ''}`}>
+        { data ? this.renderContentHeader() : null}
       </div>
     )
   }
