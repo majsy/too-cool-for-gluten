@@ -20,8 +20,7 @@ export default class App extends React.Component {
       recipeData: null,
       popupIsOpen: false,
       buttonClick: 0,
-      eggIsOpen: false,
-      displayContent: false
+      eggIsOpen: false
     }
   }
 
@@ -35,11 +34,12 @@ export default class App extends React.Component {
     this.loadAppData()
       .then(this.loadRecipeData)
       .then(() => {
-        console.log('all loaded!', this.state);
+        // console.log('all loaded!', this.state);
         this.setState({dataIsLoaded: true})
       })
       .catch((e) => {
         // something went wrong with loadAppData(); 
+        console.log('error error')
       })
   }
 
@@ -64,7 +64,7 @@ export default class App extends React.Component {
       })
       .then((recipeData) => {
         this.setState({recipeData})
-      })
+      }) 
   }
 
   getRecipe() {
@@ -106,7 +106,8 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="app-container">
-        <Header data={this.state.appData} />
+        <Header data={this.state.appData} 
+         dataIsLoaded={this.state.dataIsLoaded} />
         <Button handleClick={this.handleClick} 
           data={this.state.appData} />
         <RecipeContainer currentRecipe={this.state.currentRecipe} />

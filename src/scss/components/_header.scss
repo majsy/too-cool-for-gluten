@@ -31,6 +31,11 @@
   transition: all 800ms $expo-ease-out;
   transition-delay: 700ms;  
   text-align: center;
+
+  // &.textIsShowing {
+  //   opacity: 1;
+  //   transform: translateY(0);
+  // }
 }
 
 .subhead {
@@ -42,7 +47,7 @@
   }
 }
 
-.isShowing {
+.textIsShowing {
   .title,
   .subhead {
     opacity: 1;
