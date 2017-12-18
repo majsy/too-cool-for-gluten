@@ -34,36 +34,39 @@ export default class App extends React.Component {
     this.loadAppData()
       .then(this.loadRecipeData)
       .then(() => {
-        // console.log('all loaded!', this.state);
-        this.setState({dataIsLoaded: true})
-      })
-      .catch((e) => {
-        // something went wrong with loadAppData(); 
-        console.log('error error')
+        if (this.state.appData && this.state.recipeData) {
+          this.setState({dataIsLoaded: true})
+        }
       })
   }
 
   loadAppData = () => {
     return fetch(END_POINT.APP)
       .then(response => {
-        if (response.status === 200) {
+        if (response) {
           return response.json()
         }
       })
       .then((appData) => {
         this.setState({appData})
       })
+      .catch((e) => {
+        return e
+      })
   }
 
   loadRecipeData = () => {
     return fetch(END_POINT.RECIPES)
       .then(response => {
-        if (response.status === 200) {
+        if (response) {
           return response.json()
         }
       })
       .then((recipeData) => {
         this.setState({recipeData})
+      })
+      .catch((e) => {
+        return e
       }) 
   }
 
