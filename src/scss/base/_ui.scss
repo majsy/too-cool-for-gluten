@@ -7,6 +7,11 @@
 
 .cta {
   text-decoration: none;
+  transition: all 800ms $expo-ease-out;
+
+  &:hover {
+    color: $pink-dark;
+  }
 }
 
 .button {

@@ -3,16 +3,14 @@
 
 .popup-container {
   opacity: 0;
-  @include size(350px, 300px);
-  background-color: $white;
-  transform: translate3d(0, 100px, 0);
+  @include size(100%, auto);
+  transform: translate3d(0, 50px, 0);
   transition: all 800ms $expo-ease-out;
   z-index: -1;
   position: absolute;
   bottom: 10%;
-  border-radius: 25px;
+  padding: 10px;
   left: 20px;
-  border: 2px solid $red;
 
   &.isOpen {
     opacity: 1;

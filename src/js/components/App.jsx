@@ -115,7 +115,8 @@ export default class App extends React.Component {
           data={this.state.appData} />
         <RecipeContainer currentRecipe={this.state.currentRecipe} />
         <Footer handleIconClick={this.handleIconClick} 
-          data={this.state.appData} />
+          data={this.state.appData}
+          dataIsLoaded={this.state.dataIsLoaded} />
         <PopupAbout popupIsOpen={this.state.popupIsOpen} 
           data={this.state.appData} />
         <Egg eggIsOpen={this.state.eggIsOpen} />

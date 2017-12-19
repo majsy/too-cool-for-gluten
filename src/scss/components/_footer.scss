@@ -3,19 +3,20 @@
 @import '../base/ui.scss';
 
 .footer {
-  @include size(100%, 0);
+  @include size(100%, 45px);
   position: absolute;
   bottom: 0;
   padding: 0 15px;
   margin-bottom: 10px;
   box-sizing: border-box;
-  opacity: 0;
-  transition: all 600ms $expo-ease-out;
+  transform: translateY(30px);
+  transition: all 800ms $expo-ease-out;
   transition-delay: 1300ms;
+  opacity: 0;
 
   &.isShowing {
     opacity: 1;
-    height: 45px;
+    transform: translateY(0);
   }
 }
 
