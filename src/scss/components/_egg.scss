@@ -1,0 +1,50 @@
+@import '../base/_mixins.scss';
+@import '../base/variables.scss';
+
+.egg {
+  @include size(80px);
+  position: absolute;
+  transition: all 800ms $cubic-ease-in;
+  z-index: 2;
+
+  &.isOpen {
+    transition: all 700ms $quint-ease-out;
+  }
+
+  &.hamburger {
+    bottom: -30%;
+    transform: translateX(40%) rotate(10deg);
+
+    &.isOpen {
+      bottom: 20%;
+      transform: translateX(50%) rotate(0deg);
+    }
+  }
+
+  &.pasta {
+    // bottom: 10%;
+    right: -10%;
+    transform: translateY(0) rotate(0deg);
+
+    &.isOpen {
+      right: 15%;
+      transform: translateY(10%) rotate(-10deg);
+    }
+  }
+
+  &.pizza {
+    top: -20%;
+    transform: translateX(70%) rotate(-10deg);
+
+    &.isOpen {
+      top: 15%;
+      transform: translateX(80%) rotate(10deg);
+    }
+  }
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}

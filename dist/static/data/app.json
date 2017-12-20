@@ -3,12 +3,7 @@
   "subhead": "There is a life beyond those evil grains.",
   "button": "get inspired",
   "recipeDescription": "description",
-  "footer": {
-    "credit": "Majsan",
-    "url": "http://www.majsanauvinen.com"
-  },
-  "about": {
-    "title": "about",
-    "copy": "bla bla"
-  }
+  "creditLabel": "Majsan",
+  "creditUrl": "http://www.majsanauvinen.com",
+  "aboutCopy": "bla bla bla bla"
 }

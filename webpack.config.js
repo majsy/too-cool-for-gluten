@@ -43,7 +43,8 @@ module.exports = {
       allChunks: true
     }),
     new CopyWebpackPlugin([
-      { from: './static/data', to: 'static/data/' }
+      { from: './static/data', to: 'static/data/' },
+      { from: './static/images', to: 'static/images/' }
     ])
   ]
 }

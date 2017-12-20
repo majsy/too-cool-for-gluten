@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import Header from './Header.jsx'
 import Button from './Button.jsx'
 import RecipeContainer from './RecipeContainer.jsx'
@@ -7,7 +7,8 @@ import PopupAbout from './PopupAbout.jsx'
 import Egg from './Egg.jsx'
 import Loader from './Loader.jsx'
 import styles from '../../scss/components/_app.scss'
-import {END_POINT} from "../common/end-points";
+import { END_POINT } from "../common/end-points"
+import { EGGS } from "../common/eggs"
 
 export default class App extends React.Component {
   constructor() {
@@ -20,7 +21,8 @@ export default class App extends React.Component {
       recipeData: null,
       popupIsOpen: false,
       buttonClick: 0,
-      eggIsOpen: false
+      eggIsOpen: false,
+      currentEgg: null
     }
   }
 
@@ -76,21 +78,34 @@ export default class App extends React.Component {
     const currentRecipe = recipes[randomIndex];
 
     return (
-      this.setState({currentRecipe: currentRecipe}),
+      this.setState({currentRecipe}),
       this.setState({buttonClick: this.state.buttonClick + 1})
     )
   }
 
   countButtonClick() {
-    if (this.state.buttonClick === 11) {
-      console.log('surprise!')
-      this.setState({buttonClick: 0})
+    if (this.state.buttonClick === 3) {
       this.openEgg();
     }
   }
 
+  getCurrentEgg() {
+    const eggs = EGGS;
+    const randomIndex = [Math.floor(Math.random() * eggs.length)];
+    const currentEgg = eggs[randomIndex];
+    this.setState({currentEgg})
+  }
+
   openEgg() {
-    this.setState({eggIsOpen: true})
+    this.getCurrentEgg();
+    setTimeout(() => {
+      this.setState({eggIsOpen: true})
+    }, 100)
+    
+    setTimeout(() => {
+      this.closeEgg();
+      this.setState({buttonClick: 0})
+    }, 800)
   }
 
   closeEgg() {
@@ -119,7 +134,7 @@ export default class App extends React.Component {
           dataIsLoaded={this.state.dataIsLoaded} />
         <PopupAbout popupIsOpen={this.state.popupIsOpen} 
           data={this.state.appData} />
-        <Egg eggIsOpen={this.state.eggIsOpen} />
+        <Egg currentEgg={this.state.currentEgg} eggIsOpen={this.state.eggIsOpen} />
     
         { !this.state.dataIsLoaded ? <Loader /> : null }
       </div>
