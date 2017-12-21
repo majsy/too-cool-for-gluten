@@ -1,47 +1,47 @@
 @import '../base/_mixins.scss';
 @import '../base/variables.scss';
 
-.egg {
-  @include size(80px);
+.hamburger,
+.pasta,
+.pizza {
   position: absolute;
   transition: all 800ms $cubic-ease-in;
   z-index: 2;
+  @include size(80px);
 
   &.isOpen {
     transition: all 700ms $quint-ease-out;
+    // transition-delay: 150ms;
   }
+}
 
-  &.hamburger {
-    bottom: -30%;
-    left: 10%;
-    transform: rotate(10deg);
+.hamburger {
+  bottom: 15%;
+  left: 10%;
+  transform: translateY(300%) rotate(0deg);
 
-    &.isOpen {
-      bottom: 20%;
-      transform: rotate(0deg);
-    }
+  &.isOpen {
+    transform: translateY(0) rotate(15deg);
   }
+}
 
-  &.pasta {
-    right: -30%;
-    bottom: 20%;
-    transform: rotate(0deg);
+.pasta {
+  bottom: 25%;
+  right: 15%;
+  transform: translateY(400%) rotate(0deg);
 
-    &.isOpen {
-      right: 15%;
-      transform: rotate(-10deg);
-    }
+  &.isOpen {
+    transform: translateY(0) rotate(-20deg);
   }
+}
 
-  &.pizza {
-    top: -20%;
-    left: 40%;
-    transform: rotate(-10deg);
+.pizza {
+  top: 12%;
+  left: 40%;
+  transform: translateY(-300%) rotate(-10deg);
 
-    &.isOpen {
-      top: 12%;
-      transform: rotate(10deg);
-    }
+  &.isOpen {
+    transform: translateY(0) rotate(10deg);
   }
 }
 

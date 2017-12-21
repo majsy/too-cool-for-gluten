@@ -7,7 +7,7 @@ export default class Egg extends React.Component {
     const currentEgg = this.props.currentEgg;
 
     return (
-      <div className={`egg ${currentEgg} ${eggIsOpen ? 'isOpen' : '' }`}>
+      <div className={`${currentEgg} ${eggIsOpen ? 'isOpen' : '' }`}>
         <img className="image" src={`./static/images/${currentEgg}.png`} />
       </div>
     )

@@ -84,7 +84,7 @@ export default class App extends React.Component {
   }
 
   countButtonClick() {
-    if (this.state.buttonClick === 3) {
+    if (this.state.buttonClick === 1) {
       this.openEgg();
     }
   }
