@@ -12,37 +12,36 @@
   }
 
   &.hamburger {
-    bottom: -30%;
-    left: 10%;
-    transform: rotate(10deg);
-
-    &.isOpen {
-      bottom: 20%;
-      transform: rotate(0deg);
-    }
-  }
-
-  &.pasta {
-    right: -30%;
     bottom: 20%;
-    transform: rotate(0deg);
+    left: 10%;
+    transform: transformY(200%) rotate(10deg);
 
     &.isOpen {
-      right: 15%;
-      transform: rotate(-10deg);
+      transform: transformY(0) rotate(0deg);
     }
   }
 
-  &.pizza {
-    top: -20%;
-    left: 40%;
-    transform: rotate(-10deg);
+  // &.pasta {
+  //   right: -30%;
+  //   bottom: 20%;
+  //   transform: rotate(0deg);
 
-    &.isOpen {
-      top: 12%;
-      transform: rotate(10deg);
-    }
-  }
+  //   &.isOpen {
+  //     right: 15%;
+  //     transform: rotate(-10deg);
+  //   }
+  // }
+
+  // &.pizza {
+  //   top: -20%;
+  //   left: 40%;
+  //   transform: rotate(-10deg);
+
+  //   &.isOpen {
+  //     top: 12%;
+  //     transform: rotate(10deg);
+  //   }
+  // }
 }
 
 .image {

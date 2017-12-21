@@ -3,10 +3,20 @@
 @import '../base/ui.scss';
 
 .button-about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
-  background-color: transparent;
-  font-weight: 900;
-  font-size: 32px;
-  font-family: 'Lato', sans-serif;
-  width: auto;
+  background: transparent;
+  outline: none;
+
+  .icon {
+    font-size: 28px;
+    color: $red;
+    transition: all 600ms $expo-ease-out;
+
+    &:hover {
+      transform: scale(1.1)
+    }
+  }
 }

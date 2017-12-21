@@ -18,9 +18,9 @@ export default class Header extends React.Component {
     const data = this.props.data;
 
     return (
-      <div className={`header ${data ? 'isShowing' : ''}`}>
+      <header className={`header ${data ? 'isShowing' : ''}`}>
         { data ? this.renderContentHeader() : null}
-      </div>
+      </header>
     )
   }
 }

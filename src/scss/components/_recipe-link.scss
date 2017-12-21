@@ -1,7 +1,12 @@
 @import '../base/variables.scss';
 @import '../base/ui.scss';
+@import '../base/mixins.scss';
 
 .recipe-link {
   color: $red;
   text-align: center;
+
+  @include breakpoint(mobile-s) {
+    font-size: 20px;
+  }
 }

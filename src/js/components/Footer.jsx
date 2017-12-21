@@ -13,7 +13,8 @@ export default class Footer extends React.Component {
     
     return (
       <div className={`inner-container`}>
-        <ButtonAbout handleIconClick={this.handleIconClick} />
+        <ButtonAbout icon={this.props.buttonIcon} 
+          handleIconClick={this.handleIconClick} />
         <p className={`credit btnText`}>By <a href={data.creditUrl} className="cta btnText" target="_blank">{data.creditLabel}</a></p>
       </div>
     )
@@ -23,9 +24,9 @@ export default class Footer extends React.Component {
     const data = this.props.data;
     
     return (
-      <div className={`footer ${data ? 'isShowing' : ''}`}>
+      <footer className={`footer ${data ? 'isShowing' : ''}`}>
         { data ? this.renderContentFooter() : null }
-      </div>
+      </footer>
     )
   }
 }

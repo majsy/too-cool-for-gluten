@@ -3,16 +3,16 @@
 @import '../base/ui.scss';
 
 .footer {
-  @include size(100%, 45px);
+  @include size(100%, 40px);
   position: absolute;
   bottom: 0;
   padding: 0 15px;
-  margin-bottom: 10px;
-  box-sizing: border-box;
   transform: translateY(30px);
   transition: all 800ms $expo-ease-out;
   transition-delay: 1300ms;
   opacity: 0;
+  background-color: $pink-light;
+  z-index: 2;
 
   &.isShowing {
     opacity: 1;
@@ -23,5 +23,5 @@
 .inner-container {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../../scss/components/_button-about.scss'
+import FontAwesome from 'react-fontawesome';
 
 export default class ButtonAbout extends React.Component {
   handleIconClick = () => {
@@ -7,8 +8,12 @@ export default class ButtonAbout extends React.Component {
   }
 
   render() {
+    const icon = this.props.icon;
+
     return (
-      <button className="button button-about" onClick={this.handleIconClick}>?</button>
+      <button className="button-about" onClick={this.handleIconClick}>
+        <FontAwesome className={`icon ${icon}`} name={icon} />
+      </button>
     )
   }
 }
