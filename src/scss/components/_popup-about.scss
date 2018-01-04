@@ -12,7 +12,7 @@
   padding: 12px 15px;
   background-color: $pink-light;
   width: 75%;
-  max-width: 700px;
+  max-width: 670px;
 
   @include breakpoint(mobile) {
     width: 100%;
@@ -28,5 +28,15 @@
   .copy {
     font-size: 12px;
     text-align: left;
+
+    span {
+      font-weight: 600;
+      font-size: 15px;
+      color: $pink-dark;
+
+      @include breakpoint(mobile) {
+        font-size: 14px;
+      }
+    }
   }
 }

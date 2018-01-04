@@ -7,7 +7,7 @@ export default class PopupAbout extends React.Component {
 
     return (
       <div className={`popup-container ${this.props.popupIsOpen ? 'isOpen' : ''}`}>
-        { data ? <p className="copy">{data.aboutCopy}</p> : null }
+        { data ? <p className="copy" dangerouslySetInnerHTML={{__html: data.aboutCopy}}></p> : null }
       </div>
     )
   }
