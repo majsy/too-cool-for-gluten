@@ -9,6 +9,7 @@ import Loader from './Loader.jsx'
 import styles from '../../scss/components/_app.scss'
 import { END_POINT } from "../common/end-points"
 import { EGGS } from "../common/eggs"
+import { BUTTON_LABELS } from "../common/button-labels"
 
 export default class App extends React.Component {
   constructor() {
@@ -22,8 +23,7 @@ export default class App extends React.Component {
       popupIsOpen: false,
       buttonClick: 0,
       eggIsOpen: false,
-      currentEgg: null,
-      buttonIcon: 'question'
+      currentEgg: null
     }
   }
 
@@ -113,8 +113,12 @@ export default class App extends React.Component {
     this.setState({eggIsOpen: false})
   }
 
-  handleIconClick = () => {
-    this.setState({popupIsOpen: !this.state.popupIsOpen})
+  handlePopup = () => {
+    if (!this.state.popupIsOpen) {
+      this.setState({popupIsOpen: true})
+    } else if (this.state.popupIsOpen) {
+      this.setState({popupIsOpen: false})
+    }
   }
 
   handleClick = () => {
@@ -130,10 +134,10 @@ export default class App extends React.Component {
         <Button handleClick={this.handleClick} 
           data={this.state.appData} />
         <RecipeContainer currentRecipe={this.state.currentRecipe} />
-        <Footer handleIconClick={this.handleIconClick} 
+        <Footer handlePopup={this.handlePopup} 
           data={this.state.appData}
           dataIsLoaded={this.state.dataIsLoaded}
-          buttonIcon={this.state.buttonIcon} />
+          popupIsOpen={this.state.popupIsOpen} />
         <PopupAbout popupIsOpen={this.state.popupIsOpen} 
           data={this.state.appData} />
         <Egg currentEgg={this.state.currentEgg} eggIsOpen={this.state.eggIsOpen} />

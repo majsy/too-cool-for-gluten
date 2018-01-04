@@ -3,20 +3,8 @@
 @import '../base/ui.scss';
 
 .button-about {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border: none;
   background: transparent;
   outline: none;
-
-  .icon {
-    font-size: 28px;
-    color: $red;
-    transition: all 600ms $expo-ease-out;
-
-    &:hover {
-      transform: scale(1.1)
-    }
-  }
+  padding: 0;
 }
