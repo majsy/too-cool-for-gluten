@@ -4,17 +4,39 @@
 .popup-container {
   opacity: 0;
   @include size(100%, auto);
-  transform: translate3d(0, 50px, 0);
-  transition: all 800ms $expo-ease-out;
+  transform: translate3d(0, 100px, 0);
+  transition: all 400ms $cubic-ease-in;
   z-index: -1;
   position: absolute;
-  bottom: 10%;
-  padding: 10px;
-  left: 20px;
+  bottom: 40px;
+  padding: 12px 15px;
+  background-color: $pink-light;
+  width: 75%;
+  max-width: 670px;
+
+  @include breakpoint(mobile) {
+    width: 100%;
+  }
 
   &.isOpen {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+    transition: all 800ms $expo-ease-out;
     z-index: 1;
+  }
+
+  .copy {
+    font-size: 12px;
+    text-align: left;
+
+    span {
+      font-weight: 600;
+      font-size: 15px;
+      color: $pink-dark;
+
+      @include breakpoint(mobile) {
+        font-size: 14px;
+      }
+    }
   }
 }

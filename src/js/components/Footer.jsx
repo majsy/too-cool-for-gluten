@@ -1,19 +1,27 @@
 import React from 'react';
 import styles from '../../scss/components/_footer.scss'
 import ButtonAbout from './ButtonAbout.jsx'
+import { BUTTON_LABELS } from "../common/button-labels"
 
 export default class Footer extends React.Component {
-  handleIconClick = () => {
-    this.props.handleIconClick();
+  handlePopup = () => {
+    this.props.handlePopup();
   }
 
   renderContentFooter() {
     const data = this.props.data;
+    const label = this.props.label;
     const isLoaded = this.props.dataIsLoaded;
+    const popupIsOpen = this.props.popupIsOpen;
     
     return (
       <div className={`inner-container`}>
-        <ButtonAbout handleIconClick={this.handleIconClick} />
+        <ButtonAbout handlePopup={this.handlePopup}
+          label={BUTTON_LABELS.CLICKED}
+          isShowing={`popupButton ${popupIsOpen ? 'isShowingLabel' : ''}`} /> 
+        <ButtonAbout handlePopup={this.handlePopup}
+          label={BUTTON_LABELS.DEFAULT}
+          isShowing={`popupButton ${!popupIsOpen ? 'isShowingLabel' : ''}`} /> 
         <p className={`credit btnText`}>By <a href={data.creditUrl} className="cta btnText" target="_blank">{data.creditLabel}</a></p>
       </div>
     )
@@ -23,9 +31,9 @@ export default class Footer extends React.Component {
     const data = this.props.data;
     
     return (
-      <div className={`footer ${data ? 'isShowing' : ''}`}>
+      <footer className={`footer ${data ? 'isShowing' : ''}`}>
         { data ? this.renderContentFooter() : null }
-      </div>
+      </footer>
     )
   }
 }

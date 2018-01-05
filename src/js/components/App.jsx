@@ -84,7 +84,7 @@ export default class App extends React.Component {
   }
 
   countButtonClick() {
-    if (this.state.buttonClick === 1) {
+    if (this.state.buttonClick === 10) {
       this.openEgg();
     }
   }
@@ -112,8 +112,12 @@ export default class App extends React.Component {
     this.setState({eggIsOpen: false})
   }
 
-  handleIconClick = () => {
-    this.setState({popupIsOpen: !this.state.popupIsOpen})
+  handlePopup = () => {
+    if (!this.state.popupIsOpen) {
+      this.setState({popupIsOpen: true})
+    } else if (this.state.popupIsOpen) {
+      this.setState({popupIsOpen: false})
+    }
   }
 
   handleClick = () => {
@@ -129,9 +133,10 @@ export default class App extends React.Component {
         <Button handleClick={this.handleClick} 
           data={this.state.appData} />
         <RecipeContainer currentRecipe={this.state.currentRecipe} />
-        <Footer handleIconClick={this.handleIconClick} 
+        <Footer handlePopup={this.handlePopup} 
           data={this.state.appData}
-          dataIsLoaded={this.state.dataIsLoaded} />
+          dataIsLoaded={this.state.dataIsLoaded}
+          popupIsOpen={this.state.popupIsOpen} />
         <PopupAbout popupIsOpen={this.state.popupIsOpen} 
           data={this.state.appData} />
         <Egg currentEgg={this.state.currentEgg} eggIsOpen={this.state.eggIsOpen} />

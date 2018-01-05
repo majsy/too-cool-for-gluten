@@ -16,6 +16,14 @@
     opacity: 1;
     transform: translateY(0);
   }
+
+  @include breakpoint(mobile) {
+    margin-top: 80px;
+  }
+
+  @include breakpoint(mobile-s) {
+    margin-top: 50px;
+  }
 }
 
 .button {

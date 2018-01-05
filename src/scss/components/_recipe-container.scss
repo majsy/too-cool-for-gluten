@@ -2,8 +2,8 @@
 @import '../base/_mixins.scss';
 
 .recipe-container {
-  padding: 0 100px;
-  max-width: 500px;
+  max-width: 600px;
+  padding: 0 50px;
   margin: 50px auto 0;
   transition: all 600ms $expo-ease-out;
   opacity: 0;
@@ -16,6 +16,12 @@
   }
 
   @include breakpoint(mobile) {
-    padding: 0 50px;
+    max-width: 500px;
+    padding: 0 20px;
+    margin-top: 40px;
+  }
+
+  @include breakpoint(mobile-s) {
+    margin-top: 30px;
   }
 }
