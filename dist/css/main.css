@@ -166,8 +166,8 @@ ol, ul {
       width: 150px;
       height: 50px; } }
 .recipe-container {
-  padding: 0 100px;
-  max-width: 500px;
+  max-width: 600px;
+  padding: 0 50px;
   margin: 50px auto 0;
   transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
   opacity: 0;
@@ -178,6 +178,7 @@ ol, ul {
     transform: translateY(0); }
   @media (max-width: 768px) {
     .recipe-container {
+      max-width: 500px;
       padding: 0 20px;
       margin-top: 40px; } }
   @media (max-width: 320px) {
@@ -239,10 +240,23 @@ ol, ul {
     opacity: 1;
     transform: translateY(0); }
 
+.popupButton {
+  transform: translateX(-200%);
+  opacity: 0;
+  transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+  position: absolute;
+  left: 0; }
+  .popupButton.isShowingLabel {
+    transform: translateX(0%);
+    opacity: 1;
+    transition-delay: 400ms; }
+
+.credit {
+  position: absolute;
+  right: 0; }
+
 .inner-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
+  position: relative; }
 .cta,
 .button {
   cursor: pointer; }
@@ -270,24 +284,32 @@ ol, ul {
   width: 100%;
   height: auto;
   transform: translate3d(0, 100px, 0);
-  transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
   z-index: -1;
   position: absolute;
   bottom: 40px;
   padding: 12px 15px;
   background-color: #ffebea;
   width: 75%;
-  max-width: 700px; }
+  max-width: 670px; }
   @media (max-width: 768px) {
     .popup-container {
       width: 100%; } }
   .popup-container.isOpen {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+    transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
     z-index: 1; }
   .popup-container .copy {
     font-size: 12px;
     text-align: left; }
+    .popup-container .copy span {
+      font-weight: 600;
+      font-size: 15px;
+      color: #B84A62; }
+      @media (max-width: 768px) {
+        .popup-container .copy span {
+          font-size: 14px; } }
 .egg {
   width: 80px;
   height: 80px;
