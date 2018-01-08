@@ -954,7 +954,7 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(BUTTON_LABELS, 'BUTTON_LABELS', '/Users/madeleineauvinen/Documents/projects/2cool4gluten/src/js/common/button-labels.js');
+  __REACT_HOT_LOADER__.register(BUTTON_LABELS, 'BUTTON_LABELS', '/Users/Majsan/_codeProjects/too-cool-for-gluten/src/js/common/button-labels.js');
 }();
 
 ;
@@ -18998,9 +18998,9 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(App, 'App', '/Users/madeleineauvinen/Documents/projects/2cool4gluten/src/js/components/App.jsx');
+  __REACT_HOT_LOADER__.register(App, 'App', '/Users/Majsan/_codeProjects/too-cool-for-gluten/src/js/components/App.jsx');
 
-  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/madeleineauvinen/Documents/projects/2cool4gluten/src/js/components/App.jsx');
+  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/Majsan/_codeProjects/too-cool-for-gluten/src/js/components/App.jsx');
 }();
 
 ;
@@ -19089,9 +19089,9 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(Header, 'Header', '/Users/madeleineauvinen/Documents/projects/2cool4gluten/src/js/components/Header.jsx');
+  __REACT_HOT_LOADER__.register(Header, 'Header', '/Users/Majsan/_codeProjects/too-cool-for-gluten/src/js/components/Header.jsx');
 
-  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/madeleineauvinen/Documents/projects/2cool4gluten/src/js/components/Header.jsx');
+  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/Majsan/_codeProjects/too-cool-for-gluten/src/js/components/Header.jsx');
 }();
 
 ;
@@ -19191,9 +19191,9 @@ var _temp2 = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(Button, 'Button', '/Users/madeleineauvinen/Documents/projects/2cool4gluten/src/js/components/Button.jsx');
+  __REACT_HOT_LOADER__.register(Button, 'Button', '/Users/Majsan/_codeProjects/too-cool-for-gluten/src/js/components/Button.jsx');
 
-  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/madeleineauvinen/Documents/projects/2cool4gluten/src/js/components/Button.jsx');
+  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/Majsan/_codeProjects/too-cool-for-gluten/src/js/components/Button.jsx');
 }();
 
 ;
@@ -19278,9 +19278,9 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(RecipeContainer, 'RecipeContainer', '/Users/madeleineauvinen/Documents/projects/2cool4gluten/src/js/components/RecipeContainer.jsx');
+  __REACT_HOT_LOADER__.register(RecipeContainer, 'RecipeContainer', '/Users/Majsan/_codeProjects/too-cool-for-gluten/src/js/components/RecipeContainer.jsx');
 
-  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/madeleineauvinen/Documents/projects/2cool4gluten/src/js/components/RecipeContainer.jsx');
+  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/Majsan/_codeProjects/too-cool-for-gluten/src/js/components/RecipeContainer.jsx');
 }();
 
 ;
@@ -19355,9 +19355,9 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(RecipeLink, 'RecipeLink', '/Users/madeleineauvinen/Documents/projects/2cool4gluten/src/js/components/RecipeLink.jsx');
+  __REACT_HOT_LOADER__.register(RecipeLink, 'RecipeLink', '/Users/Majsan/_codeProjects/too-cool-for-gluten/src/js/components/RecipeLink.jsx');
 
-  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/madeleineauvinen/Documents/projects/2cool4gluten/src/js/components/RecipeLink.jsx');
+  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/Majsan/_codeProjects/too-cool-for-gluten/src/js/components/RecipeLink.jsx');
 }();
 
 ;
@@ -19488,9 +19488,9 @@ var _temp2 = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(Footer, 'Footer', '/Users/madeleineauvinen/Documents/projects/2cool4gluten/src/js/components/Footer.jsx');
+  __REACT_HOT_LOADER__.register(Footer, 'Footer', '/Users/Majsan/_codeProjects/too-cool-for-gluten/src/js/components/Footer.jsx');
 
-  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/madeleineauvinen/Documents/projects/2cool4gluten/src/js/components/Footer.jsx');
+  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/Majsan/_codeProjects/too-cool-for-gluten/src/js/components/Footer.jsx');
 }();
 
 ;
@@ -19591,9 +19591,9 @@ var _temp2 = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(ButtonAbout, 'ButtonAbout', '/Users/madeleineauvinen/Documents/projects/2cool4gluten/src/js/components/ButtonAbout.jsx');
+  __REACT_HOT_LOADER__.register(ButtonAbout, 'ButtonAbout', '/Users/Majsan/_codeProjects/too-cool-for-gluten/src/js/components/ButtonAbout.jsx');
 
-  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/madeleineauvinen/Documents/projects/2cool4gluten/src/js/components/ButtonAbout.jsx');
+  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/Majsan/_codeProjects/too-cool-for-gluten/src/js/components/ButtonAbout.jsx');
 }();
 
 ;
@@ -19667,9 +19667,9 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(PopupAbout, 'PopupAbout', '/Users/madeleineauvinen/Documents/projects/2cool4gluten/src/js/components/PopupAbout.jsx');
+  __REACT_HOT_LOADER__.register(PopupAbout, 'PopupAbout', '/Users/Majsan/_codeProjects/too-cool-for-gluten/src/js/components/PopupAbout.jsx');
 
-  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/madeleineauvinen/Documents/projects/2cool4gluten/src/js/components/PopupAbout.jsx');
+  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/Majsan/_codeProjects/too-cool-for-gluten/src/js/components/PopupAbout.jsx');
 }();
 
 ;
@@ -19745,9 +19745,9 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(Loader, 'Loader', '/Users/madeleineauvinen/Documents/projects/2cool4gluten/src/js/components/Loader.jsx');
+  __REACT_HOT_LOADER__.register(Loader, 'Loader', '/Users/Majsan/_codeProjects/too-cool-for-gluten/src/js/components/Loader.jsx');
 
-  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/madeleineauvinen/Documents/projects/2cool4gluten/src/js/components/Loader.jsx');
+  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/Majsan/_codeProjects/too-cool-for-gluten/src/js/components/Loader.jsx');
 }();
 
 ;
@@ -19785,7 +19785,7 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(END_POINT, 'END_POINT', '/Users/madeleineauvinen/Documents/projects/2cool4gluten/src/js/common/end-points.js');
+  __REACT_HOT_LOADER__.register(END_POINT, 'END_POINT', '/Users/Majsan/_codeProjects/too-cool-for-gluten/src/js/common/end-points.js');
 }();
 
 ;

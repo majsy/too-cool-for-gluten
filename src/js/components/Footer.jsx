@@ -22,7 +22,7 @@ export default class Footer extends React.Component {
         <ButtonAbout handlePopup={this.handlePopup}
           label={BUTTON_LABELS.DEFAULT}
           isShowing={`popupButton ${!popupIsOpen ? 'isShowingLabel' : ''}`} /> 
-        <p className={`credit btnText`}>By <a href={data.creditUrl} className="cta btnText" target="_blank">{data.creditLabel}</a></p>
+        <p className={`credit btnText`}>by <a href={data.creditUrl} className="cta btnText" target="_blank">{data.creditLabel}</a></p>
       </div>
     )
   }
